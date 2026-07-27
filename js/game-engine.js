@@ -91,14 +91,21 @@ class GameEngine {
     this.activePlayer = 'player';
     this.winner = null;
     this.combatSteps = []; // preenchido a cada resolução, para a UI animar
+
+    // Separar decks militares e táticos (compatibilidade com velho formato)
+    const playerMil = playerDeck.filter(c => !c.tipo_tatico);
+    const playerTac = playerDeck.filter(c => c.tipo_tatico);
+    const aiMil = aiDeck.filter(c => !c.tipo_tatico);
+    const aiTac = aiDeck.filter(c => c.tipo_tatico);
+
     this.players = {
-      player: this._makePlayerState(playerDeck),
-      ai: this._makePlayerState(aiDeck)
+      player: this._makePlayerState(playerMil, playerTac),
+      ai: this._makePlayerState(aiMil, aiTac)
     };
-    this.players.player.hasSombra = playerDeck.some(c => c.alinhamento === 'SOMBRA');
-    this.players.ai.hasSombra = aiDeck.some(c => c.alinhamento === 'SOMBRA');
-    this.players.player.cohesionBroken = this._computeCohesionBroken(playerDeck);
-    this.players.ai.cohesionBroken = this._computeCohesionBroken(aiDeck);
+    this.players.player.hasSombra = playerMil.some(c => c.alinhamento === 'SOMBRA');
+    this.players.ai.hasSombra = aiMil.some(c => c.alinhamento === 'SOMBRA');
+    this.players.player.cohesionBroken = this._computeCohesionBroken(playerMil);
+    this.players.ai.cohesionBroken = this._computeCohesionBroken(aiMil);
     this._drawInitialHand('player');
     this._drawInitialHand('ai');
     this._runTurnStartTriggers();
@@ -113,13 +120,26 @@ class GameEngine {
     return hasA && hasB;
   }
 
-  _makePlayerState(deck) {
+  _makePlayerState(militarDeck, tacticoDeck = []) {
     return {
-      deck: shuffle(deck),
+      // Baralhos e mãos (militar)
+      deck: shuffle(militarDeck),
       hand: [],
       graveyard: [],
+
+      // Baralho tático (novo)
+      tacticoDeck: shuffle(tacticoDeck),
+      tacticoHand: [],
+      tacticoGraveyard: [],
+
+      // Tabuleiro (militar)
       front: [null, null, null, null, null, null],
       back: [null, null, null, null, null, null], // índices 0 e 5 nunca são usados para unidades (reservados a Apoio)
+
+      // Cartas táticas ativas no campo (equipamentos, construções, etc)
+      activeTactics: [], // array de cartas táticas em jogo
+
+      // Estado do turno
       unitPlaysThisRound: 0,
       extraUnitCap: 0,
       freeNextUnit: false,
@@ -300,6 +320,11 @@ class GameEngine {
 
     if (p.hand.length < 6) {
       this._drawCard(ownerId, 6 - p.hand.length);
+    }
+
+    // Desenhar 5 cartas táticas inicialmente
+    for (let i = 0; i < 5 && p.tacticoDeck.length > 0; i++) {
+      p.tacticoHand.push(p.tacticoDeck.shift());
     }
   }
 
