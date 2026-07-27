@@ -16,6 +16,13 @@ function buildFactionDeck(cartas, faccaoSlug) {
 
   const remaining = Math.max(0, 20 - apoiosF.length);
   const deck = [...apoiosF, ...unidadesF.slice(0, remaining)];
+
+  // Adicionar cartas táticas da facção (se existirem)
+  if (cartas.taticos) {
+    const taticosF = cartas.taticos.filter(c => c.faccao_slug === faccaoSlug);
+    deck.push(...taticosF);
+  }
+
   return deck;
 }
 

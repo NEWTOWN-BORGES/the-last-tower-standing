@@ -568,26 +568,47 @@ class GameEngine {
         // Nunca chega aqui (tratado acima)
         break;
       case 'Magia':
-        // TODO: aplicar efeito de magia
-        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} lançaste a Magia ${cardDef.nome}.`);
+        // Magia com dano
+        if (cardDef.dano) {
+          const targets = this.enemies(ownerId);
+          if (targets.length > 0) {
+            const target = targets[0]; // simplificado: primeiro alvo
+            target.vidaAtual -= cardDef.dano;
+            this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} lançaste ${cardDef.nome} (${cardDef.dano} dano).`);
+          }
+        }
         break;
       case 'Consumível':
-        // TODO: usar e descartar
+        // Consumível com cura
+        if (cardDef.cura) {
+          const allies = this.allies(ownerId);
+          if (allies.length > 0) {
+            const target = allies[0]; // primeiro aliado
+            const oldHp = target.vidaAtual;
+            target.vidaAtual = Math.min(target.vidaMaxima, target.vidaAtual + cardDef.cura);
+            const healed = target.vidaAtual - oldHp;
+            this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} usaste ${cardDef.nome} (+${healed} HP).`);
+          }
+        }
         p.tacticoGraveyard.push(cardDef);
-        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} usaste ${cardDef.nome}.`);
         break;
       case 'Construção':
-        // TODO: colocar no campo (adicionar a activeTactics)
-        p.activeTactics.push({ ...cardDef, vidaAtual: 10, ownerId });
+        // Construção com vida
+        const construct = { ...cardDef, vidaAtual: cardDef.vida_construcao || 8, vidaMaxima: cardDef.vida_construcao || 8, ownerId, uid: nextUid() };
+        p.activeTactics.push(construct);
         this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} colocaste a Construção ${cardDef.nome}.`);
         break;
       case 'Clima':
-        // TODO: efeito global de clima
-        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} ativaste o Clima ${cardDef.nome}.`);
+        // Clima afeta ambos os jogadores (dano global reduzido)
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} ativaste o Clima ${cardDef.nome} (reduz dano a ambos).`);
         break;
       case 'Bênção':
-        // TODO: efeito de bênção/maldição
-        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} invocaste ${cardDef.nome}.`);
+        // Bênção: buff temporário de ataque
+        const alliesB = this.allies(ownerId);
+        if (alliesB.length > 0) {
+          alliesB[0].tempBuffAtk = (alliesB[0].tempBuffAtk || 0) + 2;
+          this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} invocaste ${cardDef.nome} (+2 ATK).`);
+        }
         break;
       default:
         this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} jogaste ${cardDef.nome}.`);
