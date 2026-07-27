@@ -9,6 +9,7 @@
   const factionListEl = $('#faction-list');
   const btnStart = $('#btn-start');
   const handCardsEl = $('#hand-cards');
+  const tacticoCardsEl = $('#tactico-cards');
   const btnPass = $('#btn-pass');
   const roundNumEl = $('#round-num');
   const turnIndicatorEl = $('#turn-indicator');
@@ -182,6 +183,7 @@
 
     renderApoioEdges();
     renderHand();
+    renderTacticoHand();
     renderHud();
     renderTowers();
   }
@@ -221,6 +223,34 @@
       div.addEventListener('click', () => onHandCardClick(idx));
       handCardsEl.appendChild(div);
     });
+  }
+
+  function renderTacticoHand() {
+    if (!tacticoCardsEl) return;
+    tacticoCardsEl.innerHTML = '';
+    const p = engine.players.player;
+    const myTurn = engine.phase === 'placement' && engine.activePlayer === 'player' && !busy;
+    p.tacticoHand.forEach((cardDef, idx) => {
+      const div = document.createElement('div');
+      div.className = 'tactico-card';
+      div.innerHTML = `<img src="assets/taticos-3d/${cardDef.imagem}" alt="${cardDef.nome}" draggable="false">`;
+      div.addEventListener('click', () => onTacticoCardClick(idx));
+      if (myTurn) div.style.cursor = 'pointer';
+      tacticoCardsEl.appendChild(div);
+    });
+  }
+
+  function onTacticoCardClick(idx) {
+    if (busy || engine.phase !== 'placement' || engine.activePlayer !== 'player') return;
+    const p = engine.players.player;
+    const cardDef = p.tacticoHand[idx];
+    if (!cardDef) return;
+    previewTacticoCard(cardDef, idx);
+  }
+
+  function previewTacticoCard(cardDef, idx) {
+    showZoomReadOnly(`assets/taticos-3d/${cardDef.imagem}`);
+    Sound.click();
   }
 
   function anyOpenSlot(cardDef) {
@@ -265,6 +295,7 @@
     $$('.slot.valid-target, .card-el.valid-target').forEach((e) => e.classList.remove('valid-target'));
     targetOverlay.classList.add('hidden');
     renderHand();
+    renderTacticoHand();
   }
 
   function onHandCardClick(idx) {
@@ -316,6 +347,7 @@
     }
     pendingApoio = { handIndex: idx, def, cardDef, pairFrom: null };
     renderHand();
+    renderTacticoHand();
     beginTargeting();
   }
 
