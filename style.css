@@ -123,18 +123,20 @@ body {
 
 /* ---------------------------------------------------------------- board */
 
-#game-screen { position: relative; }
+#game-screen {
+  position: fixed; inset: 0;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, rgba(35, 28, 22, 0.95), var(--stone-950) 85%);
+}
 
 .board {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   position: relative;
-  /* nunca mais largo que 1100px / a largura do ecrã, mas também nunca mais
-     alto do que o espaço vertical disponível deixa (senão a mão e o botão
-     Passar são empurrados para fora do ecrã, especialmente em telemóvel
-     em paisagem, que é baixo). */
-  width: min(100%, 1100px, calc((100vh - 270px) * 1402 / 1122));
+  width: min(98vw, calc((100vh - 120px) * 1402 / 1122));
+  max-height: calc(100vh - 120px);
   aspect-ratio: 1402 / 1122;
-  margin: 46px auto 0;
+  margin: 30px auto 0;
   background-image: var(--board-img, url('assets/board/board-normal.png'));
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -165,8 +167,10 @@ body {
    1-4 do meio, 25%-75% — exactamente a mesma lógica da versão paisagem. */
 @media (orientation: portrait) {
   .board {
-    width: min(100%, 800px, calc((100vh - 280px) * 1024 / 1536));
+    width: min(98vw, calc((100vh - 120px) * 1024 / 1536));
+    max-height: calc(100vh - 120px);
     aspect-ratio: 1024 / 1536;
+    margin: 30px auto 0;
     background-image: var(--board-img, url('assets/board/board-normal-portrait.png'));
   }
   .board.ruined { --board-img: url('assets/board/board-ruined-portrait.png'); }
@@ -374,14 +378,18 @@ body {
 
 .hand-bar {
   position: relative;
-  display: flex; align-items: flex-end; gap: 8px;
-  padding: 6px 8px 10px;
-  background: linear-gradient(0deg, rgba(8,6,4,0.95), rgba(8,6,4,0.75) 70%, transparent);
-  z-index: 15;
+  width: 100%;
+  height: 115px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 4px 16px 8px;
+  background: linear-gradient(0deg, rgba(8,6,4,0.98), rgba(8,6,4,0.85) 75%, transparent);
+  z-index: 25;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
 }
 .hand-cards {
-  flex: 1; display: flex; gap: -18px; overflow-x: auto; overflow-y: visible;
-  padding: 10px 6px 4px;
+  flex: 1; display: flex; justify-content: center; align-items: center;
+  overflow-x: auto; overflow-y: visible;
+  padding: 14px 10px 4px;
   scrollbar-width: none;
 }
 .hand-cards::-webkit-scrollbar { display: none; }
@@ -389,29 +397,34 @@ body {
 .hand-card {
   position: relative;
   flex: 0 0 auto;
-  width: 112px; aspect-ratio: 5/7;
-  margin-left: -30px;
-  border-radius: 9px;
+  width: 115px; aspect-ratio: 5/7;
+  margin-left: -22px;
+  border-radius: 8px;
   border: 2px solid var(--stone-500);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.65);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.75);
   cursor: pointer;
-  transition: transform .15s ease, box-shadow .15s ease, margin-left .15s ease;
+  transition: transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s ease, margin-left .15s ease;
   overflow: hidden;
   background: #0a0908;
 }
 .hand-cards .hand-card:first-child { margin-left: 0; }
 .hand-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 .hand-card.apoio-card { border-color: var(--ember-600); }
-.hand-card:hover { transform: translateY(-18px); z-index: 3; border-color: var(--ember-400); }
+.hand-card:hover {
+  transform: translateY(-28px) scale(1.18);
+  z-index: 10;
+  border-color: var(--ember-400);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.9), 0 0 20px rgba(255,138,61,0.5);
+}
 .hand-card.selected {
-  transform: translateY(-30px) scale(1.06);
-  z-index: 5;
-  box-shadow: 0 0 0 3px var(--ember-400), 0 8px 22px rgba(255,122,41,0.5);
+  transform: translateY(-34px) scale(1.22);
+  z-index: 12;
+  box-shadow: 0 0 0 3px var(--ember-400), 0 14px 32px rgba(255,122,41,0.65);
 }
 .hand-card.disabled { filter: grayscale(0.7) brightness(0.55); }
 
 @media (min-width: 700px) {
-  .hand-card { width: 140px; margin-left: -34px; }
+  .hand-card { width: 135px; margin-left: -26px; }
 }
 
 .btn-pass { flex: 0 0 auto; }
