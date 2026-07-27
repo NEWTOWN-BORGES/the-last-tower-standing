@@ -107,6 +107,13 @@
     });
   }
 
+  const btnMusic = $('#btn-music');
+  btnMusic?.addEventListener('click', () => {
+    const isMuted = Sound.isMuted();
+    Sound.setMuted(!isMuted);
+    btnMusic.textContent = !isMuted ? '🔇 Muto' : '🎵 Música';
+  });
+
   function startGame(playerSlug, allSlugs) {
     const others = allSlugs.filter((s) => s !== playerSlug);
     const aiSlug = others[Math.floor(Math.random() * others.length)];
@@ -124,6 +131,7 @@
 
     menuScreen.classList.add('hidden');
     gameScreen.classList.remove('hidden');
+    Sound.startMusic();
     render();
     maybeAdvanceAI();
   }
@@ -500,39 +508,33 @@
   async function animateCombat(steps) {
     for (const step of steps) {
       const attackerEl = $(`.card-el[data-uid="${step.attacker}"]`);
-      if (attackerEl) {
-        const attackerCard = engine.allInPlay().find((c) => c.uid === step.attacker) ||
-          [...engine.players.player.graveyard, ...engine.players.ai.graveyard].find((c) => c.uid === step.attacker);
-        const isPlayerSide = attackerCard && attackerCard.ownerId === 'player';
-        // jogador está na parte de baixo do tabuleiro (avança para cima = "front");
-        // adversário está em cima (avança para baixo = "back").
-        attackerEl.classList.add(isPlayerSide ? 'attacking-front' : 'attacking-back');
-      }
-      Sound.attackSwing();
 
       if (step.type === 'attack') {
         const targetEl = $(`.card-el[data-uid="${step.target}"]`);
-        if (targetEl) {
+        if (attackerEl && targetEl) {
+          const aRect = attackerEl.getBoundingClientRect();
+          const tRect = targetEl.getBoundingClientRect();
+          const dx = tRect.left - aRect.left;
+          const dy = tRect.top - aRect.top;
+
+          drawAttackTrail(aRect, tRect);
+          Sound.attackSwing();
+
+          try {
+            await attackerEl.animate([
+              { transform: 'translate(0, 0) scale(1)', zIndex: 90 },
+              { transform: `translate(${dx * 0.65}px, ${dy * 0.65}px) scale(1.22)`, zIndex: 90, offset: 0.45 },
+              { transform: 'translate(0, 0) scale(1)', zIndex: 1 }
+            ], { duration: 550, easing: 'cubic-bezier(.2,.8,.3,1)' }).finished;
+          } catch (e) {}
+
           targetEl.closest('.slot')?.classList.add('attack-target');
           showFloat(targetEl, `-${step.amount}`, 'dmg');
-        }
-        Sound.hit();
-      } else {
-        const towerBar = step.towerOwner === 'player' ? towerBarPlayer : towerBarAi;
-        const fillEl = step.towerOwner === 'player' ? towerFillPlayer : towerFillAi;
-        const hpEl = step.towerOwner === 'player' ? towerHpPlayer : towerHpAi;
-        towerBar.classList.add('siege-flash');
-        setTower(fillEl, hpEl, step.towerAfter);
-        Sound.siege();
-      }
+          Sound.hit();
 
-      await delay(600);
-
-      if (attackerEl) attackerEl.classList.remove('attacking-front', 'attacking-back');
-      if (step.type === 'attack') {
-        const targetEl = $(`.card-el[data-uid="${step.target}"]`);
-        if (targetEl) {
+          await delay(350);
           targetEl.closest('.slot')?.classList.remove('attack-target');
+
           const stillAlive = engine.getCard(step.target);
           if (!stillAlive) {
             Sound.death();
@@ -545,10 +547,55 @@
           }
         }
       } else {
+        const towerBar = step.towerOwner === 'player' ? towerBarPlayer : towerBarAi;
+        const fillEl = step.towerOwner === 'player' ? towerFillPlayer : towerFillAi;
+        const hpEl = step.towerOwner === 'player' ? towerHpPlayer : towerHpAi;
+
+        if (attackerEl && towerBar) {
+          const aRect = attackerEl.getBoundingClientRect();
+          const twRect = towerBar.getBoundingClientRect();
+          const dx = twRect.left - aRect.left;
+          const dy = twRect.top - aRect.top;
+
+          drawAttackTrail(aRect, twRect);
+          Sound.attackSwing();
+
+          try {
+            await attackerEl.animate([
+              { transform: 'translate(0, 0) scale(1)', zIndex: 90 },
+              { transform: `translate(${dx * 0.55}px, ${dy * 0.55}px) scale(1.22)`, zIndex: 90, offset: 0.45 },
+              { transform: 'translate(0, 0) scale(1)', zIndex: 1 }
+            ], { duration: 550, easing: 'cubic-bezier(.2,.8,.3,1)' }).finished;
+          } catch (e) {}
+        }
+
+        towerBar.classList.add('siege-flash');
+        setTower(fillEl, hpEl, step.towerAfter);
+        Sound.siege();
+        await delay(500);
         towerBarPlayer.classList.remove('siege-flash');
         towerBarAi.classList.remove('siege-flash');
       }
     }
+  }
+
+  function drawAttackTrail(rectA, rectB) {
+    const ax = rectA.left + rectA.width / 2;
+    const ay = rectA.top + rectA.height / 2;
+    const bx = rectB.left + rectB.width / 2;
+    const by = rectB.top + rectB.height / 2;
+
+    const length = Math.hypot(bx - ax, by - ay);
+    const angle = Math.atan2(by - ay, bx - ax) * (180 / Math.PI);
+
+    const line = document.createElement('div');
+    line.className = 'attack-trail-line';
+    line.style.width = `${length}px`;
+    line.style.left = `${ax}px`;
+    line.style.top = `${ay}px`;
+    line.style.transform = `rotate(${angle}deg)`;
+    document.body.appendChild(line);
+    setTimeout(() => line.remove(), 480);
   }
 
   function showFloat(el, text, kind) {
@@ -556,7 +603,7 @@
     f.className = 'dmg-float' + (kind ? ' ' + kind : '');
     f.textContent = text;
     el.appendChild(f);
-    setTimeout(() => f.remove(), 900);
+    setTimeout(() => f.remove(), 1100);
   }
 
   function checkGameOver() {

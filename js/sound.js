@@ -59,9 +59,40 @@
     src.start(t0);
   }
 
+  let bgmInterval = null;
+  let bgmPlaying = false;
+  const bgmNotes = [146.83, 164.81, 196.00, 220.00, 246.94, 293.66, 329.63, 392.00];
+
+  function startBgm() {
+    if (bgmPlaying || muted) return;
+    const c = ensureCtx();
+    if (!c) return;
+    bgmPlaying = true;
+    let step = 0;
+    bgmInterval = setInterval(() => {
+      if (muted || !bgmPlaying || !ctx) return;
+      const note = bgmNotes[step % bgmNotes.length];
+      tone({ freq: note, dur: 0.7, type: 'sine', vol: 0.035 });
+      if (step % 4 === 0) {
+        tone({ freq: note / 2, dur: 1.2, type: 'triangle', vol: 0.045 });
+      }
+      step++;
+    }, 650);
+  }
+
+  function stopBgm() {
+    bgmPlaying = false;
+    if (bgmInterval) { clearInterval(bgmInterval); bgmInterval = null; }
+  }
+
   const Sound = {
-    setMuted(v) { muted = v; },
+    setMuted(v) {
+      muted = v;
+      if (v) stopBgm(); else startBgm();
+    },
     isMuted() { return muted; },
+    startMusic() { startBgm(); },
+    stopMusic() { stopBgm(); },
 
     cardPlace() {
       ensureCtx();
@@ -74,29 +105,31 @@
     },
     apoioCast() {
       ensureCtx();
-      [660, 880, 1100].forEach((f, i) => tone({ freq: f, dur: 0.14, type: 'sine', vol: 0.12, delay: i * 0.045 }));
+      [660, 880, 1100, 1320].forEach((f, i) => tone({ freq: f, dur: 0.16, type: 'sine', vol: 0.14, delay: i * 0.045 }));
     },
     attackSwing() {
       ensureCtx();
-      noiseBurst({ dur: 0.09, vol: 0.12, filterFreq: 2200 });
+      noiseBurst({ dur: 0.1, vol: 0.15, filterFreq: 2400 });
+      tone({ freq: 350, endFreq: 150, dur: 0.1, type: 'sawtooth', vol: 0.1 });
     },
     hit() {
       ensureCtx();
-      tone({ freq: 140, endFreq: 60, dur: 0.18, type: 'sawtooth', vol: 0.22 });
-      noiseBurst({ dur: 0.12, vol: 0.18, filterFreq: 900 });
+      tone({ freq: 160, endFreq: 50, dur: 0.2, type: 'sawtooth', vol: 0.28 });
+      noiseBurst({ dur: 0.14, vol: 0.22, filterFreq: 900 });
     },
     death() {
       ensureCtx();
-      tone({ freq: 220, endFreq: 40, dur: 0.4, type: 'sawtooth', vol: 0.2 });
+      tone({ freq: 240, endFreq: 30, dur: 0.45, type: 'sawtooth', vol: 0.24 });
+      noiseBurst({ dur: 0.2, vol: 0.15, filterFreq: 500 });
     },
     heal() {
       ensureCtx();
-      [440, 550, 660].forEach((f, i) => tone({ freq: f, dur: 0.18, type: 'sine', vol: 0.14, delay: i * 0.06 }));
+      [440, 554, 659, 880].forEach((f, i) => tone({ freq: f, dur: 0.2, type: 'sine', vol: 0.16, delay: i * 0.05 }));
     },
     siege() {
       ensureCtx();
-      tone({ freq: 90, endFreq: 35, dur: 0.5, type: 'sine', vol: 0.3 });
-      noiseBurst({ dur: 0.3, vol: 0.2, filterFreq: 400 });
+      tone({ freq: 90, endFreq: 30, dur: 0.55, type: 'sine', vol: 0.35 });
+      noiseBurst({ dur: 0.35, vol: 0.25, filterFreq: 400 });
     },
     pass() {
       ensureCtx();
@@ -112,11 +145,11 @@
     },
     victory() {
       ensureCtx();
-      [523, 659, 784, 1046].forEach((f, i) => tone({ freq: f, dur: 0.3, type: 'triangle', vol: 0.2, delay: i * 0.14 }));
+      [523, 659, 784, 1046, 1318].forEach((f, i) => tone({ freq: f, dur: 0.35, type: 'triangle', vol: 0.25, delay: i * 0.14 }));
     },
     defeat() {
       ensureCtx();
-      [392, 349, 293, 220].forEach((f, i) => tone({ freq: f, dur: 0.35, type: 'sawtooth', vol: 0.18, delay: i * 0.16 }));
+      [392, 349, 293, 220, 164].forEach((f, i) => tone({ freq: f, dur: 0.4, type: 'sawtooth', vol: 0.2, delay: i * 0.16 }));
     }
   };
 

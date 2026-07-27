@@ -286,21 +286,39 @@ body {
 }
 
 .dmg-float {
-  position: absolute; left: 50%; top: 30%; transform: translateX(-50%);
-  font-family: var(--font-title); font-weight: 700; font-size: 1.1rem;
-  color: #ff5a3a; text-shadow: 0 0 6px #000, 0 0 10px rgba(255,90,58,0.7);
-  animation: dmg-rise 0.9s ease-out forwards;
-  pointer-events: none; z-index: 20; white-space: nowrap;
+  position: absolute; left: 50%; top: 25%; transform: translateX(-50%);
+  font-family: var(--font-title); font-weight: 800; font-size: 1.3rem;
+  color: #ff4a36; text-shadow: 0 0 8px #000, 0 0 14px rgba(255,50,30,0.9);
+  animation: dmg-rise 1.1s ease-out forwards;
+  pointer-events: none; z-index: 120; white-space: nowrap;
 }
-.dmg-float.heal { color: #6fe08a; }
-.dmg-float.shield { color: #7fc3ff; }
-@keyframes dmg-rise { 0% { opacity: 0; transform: translate(-50%, 0); } 20% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -34px); } }
+.dmg-float.heal { color: #38ef7d; text-shadow: 0 0 8px #000, 0 0 14px rgba(56,239,125,0.9); font-size: 1.35rem; }
+.dmg-float.shield { color: #56ccf2; text-shadow: 0 0 8px #000, 0 0 14px rgba(86,204,242,0.9); font-size: 1.25rem; }
+.dmg-float.buff { color: #f2c94c; text-shadow: 0 0 8px #000, 0 0 14px rgba(242,201,76,0.9); font-size: 1.25rem; }
+@keyframes dmg-rise {
+  0% { opacity: 0; transform: translate(-50%, 10px) scale(0.6); }
+  25% { opacity: 1; transform: translate(-50%, -10px) scale(1.25); }
+  100% { opacity: 0; transform: translate(-50%, -42px) scale(1); }
+}
+
+.card-el.healed-flash { animation: heal-aura .7s ease-out; }
+@keyframes heal-aura { 0% { box-shadow: 0 0 0 0 rgba(56,239,125,0.9); } 100% { box-shadow: 0 0 30px 10px rgba(56,239,125,0); } }
+
+.attack-trail-line {
+  position: fixed; pointer-events: none; z-index: 95;
+  height: 4px; border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #ff8a3d 40%, #ffffff 80%, #ff3a1a);
+  box-shadow: 0 0 12px #ff8a3d, 0 0 20px #ff3a1a;
+  transform-origin: left center;
+  animation: trail-fade 0.5s ease-out forwards;
+}
+@keyframes trail-fade { 0% { opacity: 1; transform: scaleY(1); } 100% { opacity: 0; transform: scaleY(0.2); } }
 
 .skull-pop {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; animation: skull-pop .6s ease-out forwards; pointer-events: none; z-index: 21;
+  font-size: 2rem; animation: skull-pop .7s ease-out forwards; pointer-events: none; z-index: 121;
 }
-@keyframes skull-pop { 0% { opacity: 0; transform: scale(0.3); } 30% { opacity: 1; transform: scale(1.15); } 100% { opacity: 0; transform: scale(1) translateY(-14px); } }
+@keyframes skull-pop { 0% { opacity: 0; transform: scale(0.3); } 30% { opacity: 1; transform: scale(1.3); } 100% { opacity: 0; transform: scale(1) translateY(-20px); } }
 
 /* ---------------------------------------------------------------- torres */
 
@@ -377,19 +395,24 @@ body {
 /* ---------------------------------------------------------------- mao */
 
 .hand-bar {
-  position: relative;
-  width: 100%;
-  height: 115px;
-  display: flex; align-items: center; justify-content: center; gap: 12px;
-  padding: 4px 16px 8px;
-  background: linear-gradient(0deg, rgba(8,6,4,0.98), rgba(8,6,4,0.85) 75%, transparent);
-  z-index: 25;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; align-items: flex-end; justify-content: center; gap: 14px;
+  padding: 0;
+  background: transparent;
+  z-index: 50;
+  overflow: visible !important;
+  pointer-events: none;
 }
+.hand-bar > * { pointer-events: auto; }
+
 .hand-cards {
-  flex: 1; display: flex; justify-content: center; align-items: center;
-  overflow-x: auto; overflow-y: visible;
-  padding: 14px 10px 4px;
+  flex: 0 1 auto;
+  display: flex; justify-content: center; align-items: flex-end;
+  overflow: visible !important;
+  padding: 20px 10px 0;
   scrollbar-width: none;
 }
 .hand-cards::-webkit-scrollbar { display: none; }
@@ -397,13 +420,13 @@ body {
 .hand-card {
   position: relative;
   flex: 0 0 auto;
-  width: 115px; aspect-ratio: 5/7;
-  margin-left: -22px;
+  width: 120px; aspect-ratio: 5/7;
+  margin-left: -20px;
   border-radius: 8px;
   border: 2px solid var(--stone-500);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.75);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.8);
   cursor: pointer;
-  transition: transform .2s cubic-bezier(.2,.8,.3,1), box-shadow .2s ease, margin-left .15s ease;
+  transition: transform .22s cubic-bezier(.2,.8,.3,1), box-shadow .2s ease, margin-left .15s ease, border-color .15s ease;
   overflow: hidden;
   background: #0a0908;
 }
@@ -411,23 +434,23 @@ body {
 .hand-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 .hand-card.apoio-card { border-color: var(--ember-600); }
 .hand-card:hover {
-  transform: translateY(-28px) scale(1.18);
-  z-index: 10;
+  transform: translateY(-44px) scale(1.3);
+  z-index: 100;
   border-color: var(--ember-400);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.9), 0 0 20px rgba(255,138,61,0.5);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.95), 0 0 28px rgba(255,138,61,0.6);
 }
 .hand-card.selected {
-  transform: translateY(-34px) scale(1.22);
-  z-index: 12;
-  box-shadow: 0 0 0 3px var(--ember-400), 0 14px 32px rgba(255,122,41,0.65);
+  transform: translateY(-54px) scale(1.36);
+  z-index: 101;
+  box-shadow: 0 0 0 3px var(--ember-400), 0 20px 48px rgba(255,122,41,0.75);
 }
 .hand-card.disabled { filter: grayscale(0.7) brightness(0.55); }
 
 @media (min-width: 700px) {
-  .hand-card { width: 135px; margin-left: -26px; }
+  .hand-card { width: 140px; margin-left: -24px; }
 }
 
-.btn-pass { flex: 0 0 auto; }
+.btn-pass { flex: 0 0 auto; margin-bottom: 6px; }
 
 /* ---------------------------------------------------------------- overlays */
 
