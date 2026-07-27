@@ -69,7 +69,7 @@ for (const faction of factions) {
 
       for (let ci = 0; ci < count; ci++) {
         const nameIdx = (sf * count + ci) % Math.max(1, names.length);
-        cartasTaticas.push({
+        const carta = {
           id: `tatico-${String(id).padStart(3, '0')}`,
           nome: `${names[nameIdx] || type}`,
           faccao: faction.name,
@@ -80,7 +80,29 @@ for (const faction of factions) {
           efeito_descricao: `Carta tática: ${type.toLowerCase()} da ${subfaction}`,
           custo: 0,
           imagem: `tatico-${String(id).padStart(3, '0')}.png`
-        });
+        };
+
+        // Adicionar bônus/efeitos conforme o tipo
+        if (type === 'Equipamento') {
+          // Bônus varia conforme subfacção
+          const bonusAtk = [1, 2, 1, 2][ci % 3] + (sf % 2);
+          const bonusVida = [0, 0, 1, 1][ci % 4];
+          carta.bonus_ataque = bonusAtk;
+          carta.bonus_vida = bonusVida;
+        } else if (type === 'Magia') {
+          carta.dano = 3 + (sf % 2);
+          carta.alvo = 'inimigo'; // simplificado
+        } else if (type === 'Consumível') {
+          carta.cura = 2 + (sf % 2);
+        } else if (type === 'Construção') {
+          carta.vida_construcao = 8;
+        } else if (type === 'Clima') {
+          carta.duracao_turnos = 3;
+        } else if (type === 'Bênção') {
+          carta.tipo_efeito = ci % 2 === 0 ? 'bencao' : 'maldicao';
+        }
+
+        cartasTaticas.push(carta);
         id++;
       }
     }

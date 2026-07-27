@@ -143,7 +143,7 @@
     const marks = [0, 1].map((i) => `<div class="pressure-dot ${i < card.pressaoMarcas ? 'lit' : ''}"></div>`).join('');
     const atk = engine.getEffectiveAtaque(card) + engine.getAlignmentAtkBonus(card);
     const equipHtml = card.equipamentos.map((eq, idx) =>
-      `<div class="equipment-badge" style="right: ${idx * 50}px;"><img src="assets/taticos-3d/${eq.imagem}" alt="${eq.nome}"><span>⚔</span></div>`
+      `<div class="equipment-badge equipment-${card.uid}-${idx}" style="right: ${idx * 50}px;" data-uid="${card.uid}" data-equip-idx="${idx}"><img src="assets/taticos-3d/${eq.imagem}" alt="${eq.nome}"><span>⚔</span></div>`
     ).join('');
     return `
       <img src="${card.imagem}" alt="${card.nome}" draggable="false">
@@ -190,6 +190,30 @@
     renderTacticoHand();
     renderHud();
     renderTowers();
+
+    // Adicionar event listeners aos equipamentos
+    $$('.equipment-badge').forEach((badgeEl) => {
+      badgeEl.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const uid = badgeEl.dataset.uid;
+        const equipIdx = parseInt(badgeEl.dataset.equipIdx, 10);
+        removeEquipamentoFromCard(uid, equipIdx);
+      });
+    });
+  }
+
+  function removeEquipamentoFromCard(cardUid, equipIdx) {
+    if (engine.phase !== 'placement' || engine.activePlayer !== 'player' || busy) {
+      Sound.error();
+      return;
+    }
+    const result = engine.removeEquipamento(cardUid, equipIdx);
+    if (!result.ok) {
+      Sound.error();
+      return;
+    }
+    Sound.click();
+    render();
   }
 
   function renderApoioEdges() {

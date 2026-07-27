@@ -2588,7 +2588,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Ordem",
       "custo": 0,
-      "imagem": "tatico-001.png"
+      "imagem": "tatico-001.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-002",
@@ -2600,7 +2602,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Ordem",
       "custo": 0,
-      "imagem": "tatico-002.png"
+      "imagem": "tatico-002.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-003",
@@ -2612,7 +2616,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Ordem",
       "custo": 0,
-      "imagem": "tatico-003.png"
+      "imagem": "tatico-003.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-004",
@@ -2624,7 +2630,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Ordem",
       "custo": 0,
-      "imagem": "tatico-004.png"
+      "imagem": "tatico-004.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-005",
@@ -2636,7 +2644,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Ordem",
       "custo": 0,
-      "imagem": "tatico-005.png"
+      "imagem": "tatico-005.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-006",
@@ -2648,7 +2658,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Ordem",
       "custo": 0,
-      "imagem": "tatico-006.png"
+      "imagem": "tatico-006.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-007",
@@ -2660,7 +2672,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Ordem",
       "custo": 0,
-      "imagem": "tatico-007.png"
+      "imagem": "tatico-007.png",
+      "cura": 2
     },
     {
       "id": "tatico-008",
@@ -2672,7 +2685,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Ordem",
       "custo": 0,
-      "imagem": "tatico-008.png"
+      "imagem": "tatico-008.png",
+      "cura": 2
     },
     {
       "id": "tatico-009",
@@ -2684,7 +2698,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Ordem",
       "custo": 0,
-      "imagem": "tatico-009.png"
+      "imagem": "tatico-009.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-010",
@@ -2696,7 +2711,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Ordem",
       "custo": 0,
-      "imagem": "tatico-010.png"
+      "imagem": "tatico-010.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-011",
@@ -2708,7 +2724,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Ordem",
       "custo": 0,
-      "imagem": "tatico-011.png"
+      "imagem": "tatico-011.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-012",
@@ -2720,7 +2737,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Ordem",
       "custo": 0,
-      "imagem": "tatico-012.png"
+      "imagem": "tatico-012.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-013",
@@ -2732,7 +2750,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Ordem",
       "custo": 0,
-      "imagem": "tatico-013.png"
+      "imagem": "tatico-013.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-014",
@@ -2744,7 +2763,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Ordem",
       "custo": 0,
-      "imagem": "tatico-014.png"
+      "imagem": "tatico-014.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-015",
@@ -2756,7 +2776,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Ordem",
       "custo": 0,
-      "imagem": "tatico-015.png"
+      "imagem": "tatico-015.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-016",
@@ -2768,7 +2789,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Engenharia",
       "custo": 0,
-      "imagem": "tatico-016.png"
+      "imagem": "tatico-016.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-017",
@@ -2780,7 +2803,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Engenharia",
       "custo": 0,
-      "imagem": "tatico-017.png"
+      "imagem": "tatico-017.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-018",
@@ -2792,7 +2817,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Engenharia",
       "custo": 0,
-      "imagem": "tatico-018.png"
+      "imagem": "tatico-018.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-019",
@@ -2804,7 +2831,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Engenharia",
       "custo": 0,
-      "imagem": "tatico-019.png"
+      "imagem": "tatico-019.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-020",
@@ -2816,7 +2845,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Engenharia",
       "custo": 0,
-      "imagem": "tatico-020.png"
+      "imagem": "tatico-020.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-021",
@@ -2828,7 +2859,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Engenharia",
       "custo": 0,
-      "imagem": "tatico-021.png"
+      "imagem": "tatico-021.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-022",
@@ -2840,7 +2873,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Engenharia",
       "custo": 0,
-      "imagem": "tatico-022.png"
+      "imagem": "tatico-022.png",
+      "cura": 3
     },
     {
       "id": "tatico-023",
@@ -2852,7 +2886,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Engenharia",
       "custo": 0,
-      "imagem": "tatico-023.png"
+      "imagem": "tatico-023.png",
+      "cura": 3
     },
     {
       "id": "tatico-024",
@@ -2864,7 +2899,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Engenharia",
       "custo": 0,
-      "imagem": "tatico-024.png"
+      "imagem": "tatico-024.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-025",
@@ -2876,7 +2912,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Engenharia",
       "custo": 0,
-      "imagem": "tatico-025.png"
+      "imagem": "tatico-025.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-026",
@@ -2888,7 +2925,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Engenharia",
       "custo": 0,
-      "imagem": "tatico-026.png"
+      "imagem": "tatico-026.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-027",
@@ -2900,7 +2938,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Engenharia",
       "custo": 0,
-      "imagem": "tatico-027.png"
+      "imagem": "tatico-027.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-028",
@@ -2912,7 +2951,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Engenharia",
       "custo": 0,
-      "imagem": "tatico-028.png"
+      "imagem": "tatico-028.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-029",
@@ -2924,7 +2964,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Engenharia",
       "custo": 0,
-      "imagem": "tatico-029.png"
+      "imagem": "tatico-029.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-030",
@@ -2936,7 +2977,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Engenharia",
       "custo": 0,
-      "imagem": "tatico-030.png"
+      "imagem": "tatico-030.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-031",
@@ -2948,7 +2990,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Forja",
       "custo": 0,
-      "imagem": "tatico-031.png"
+      "imagem": "tatico-031.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-032",
@@ -2960,7 +3004,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Forja",
       "custo": 0,
-      "imagem": "tatico-032.png"
+      "imagem": "tatico-032.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-033",
@@ -2972,7 +3018,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Forja",
       "custo": 0,
-      "imagem": "tatico-033.png"
+      "imagem": "tatico-033.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-034",
@@ -2984,7 +3032,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Forja",
       "custo": 0,
-      "imagem": "tatico-034.png"
+      "imagem": "tatico-034.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-035",
@@ -2996,7 +3046,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Forja",
       "custo": 0,
-      "imagem": "tatico-035.png"
+      "imagem": "tatico-035.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-036",
@@ -3008,7 +3060,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Forja",
       "custo": 0,
-      "imagem": "tatico-036.png"
+      "imagem": "tatico-036.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-037",
@@ -3020,7 +3074,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Forja",
       "custo": 0,
-      "imagem": "tatico-037.png"
+      "imagem": "tatico-037.png",
+      "cura": 2
     },
     {
       "id": "tatico-038",
@@ -3032,7 +3087,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Forja",
       "custo": 0,
-      "imagem": "tatico-038.png"
+      "imagem": "tatico-038.png",
+      "cura": 2
     },
     {
       "id": "tatico-039",
@@ -3044,7 +3100,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Forja",
       "custo": 0,
-      "imagem": "tatico-039.png"
+      "imagem": "tatico-039.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-040",
@@ -3056,7 +3113,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Forja",
       "custo": 0,
-      "imagem": "tatico-040.png"
+      "imagem": "tatico-040.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-041",
@@ -3068,7 +3126,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Forja",
       "custo": 0,
-      "imagem": "tatico-041.png"
+      "imagem": "tatico-041.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-042",
@@ -3080,7 +3139,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Forja",
       "custo": 0,
-      "imagem": "tatico-042.png"
+      "imagem": "tatico-042.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-043",
@@ -3092,7 +3152,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Forja",
       "custo": 0,
-      "imagem": "tatico-043.png"
+      "imagem": "tatico-043.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-044",
@@ -3104,7 +3165,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Forja",
       "custo": 0,
-      "imagem": "tatico-044.png"
+      "imagem": "tatico-044.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-045",
@@ -3116,7 +3178,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Forja",
       "custo": 0,
-      "imagem": "tatico-045.png"
+      "imagem": "tatico-045.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-046",
@@ -3128,7 +3191,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Milícia",
       "custo": 0,
-      "imagem": "tatico-046.png"
+      "imagem": "tatico-046.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-047",
@@ -3140,7 +3205,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Milícia",
       "custo": 0,
-      "imagem": "tatico-047.png"
+      "imagem": "tatico-047.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-048",
@@ -3152,7 +3219,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Milícia",
       "custo": 0,
-      "imagem": "tatico-048.png"
+      "imagem": "tatico-048.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-049",
@@ -3164,7 +3233,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Milícia",
       "custo": 0,
-      "imagem": "tatico-049.png"
+      "imagem": "tatico-049.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-050",
@@ -3176,7 +3247,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Milícia",
       "custo": 0,
-      "imagem": "tatico-050.png"
+      "imagem": "tatico-050.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-051",
@@ -3188,7 +3261,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Milícia",
       "custo": 0,
-      "imagem": "tatico-051.png"
+      "imagem": "tatico-051.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-052",
@@ -3200,7 +3275,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Milícia",
       "custo": 0,
-      "imagem": "tatico-052.png"
+      "imagem": "tatico-052.png",
+      "cura": 3
     },
     {
       "id": "tatico-053",
@@ -3212,7 +3288,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Milícia",
       "custo": 0,
-      "imagem": "tatico-053.png"
+      "imagem": "tatico-053.png",
+      "cura": 3
     },
     {
       "id": "tatico-054",
@@ -3224,7 +3301,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Milícia",
       "custo": 0,
-      "imagem": "tatico-054.png"
+      "imagem": "tatico-054.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-055",
@@ -3236,7 +3314,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Milícia",
       "custo": 0,
-      "imagem": "tatico-055.png"
+      "imagem": "tatico-055.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-056",
@@ -3248,7 +3327,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Milícia",
       "custo": 0,
-      "imagem": "tatico-056.png"
+      "imagem": "tatico-056.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-057",
@@ -3260,7 +3340,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Milícia",
       "custo": 0,
-      "imagem": "tatico-057.png"
+      "imagem": "tatico-057.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-058",
@@ -3272,7 +3353,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Milícia",
       "custo": 0,
-      "imagem": "tatico-058.png"
+      "imagem": "tatico-058.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-059",
@@ -3284,7 +3366,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Milícia",
       "custo": 0,
-      "imagem": "tatico-059.png"
+      "imagem": "tatico-059.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-060",
@@ -3296,7 +3379,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Milícia",
       "custo": 0,
-      "imagem": "tatico-060.png"
+      "imagem": "tatico-060.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-061",
@@ -3308,7 +3392,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Fé",
       "custo": 0,
-      "imagem": "tatico-061.png"
+      "imagem": "tatico-061.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-062",
@@ -3320,7 +3406,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Fé",
       "custo": 0,
-      "imagem": "tatico-062.png"
+      "imagem": "tatico-062.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-063",
@@ -3332,7 +3420,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Fé",
       "custo": 0,
-      "imagem": "tatico-063.png"
+      "imagem": "tatico-063.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-064",
@@ -3344,7 +3434,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Fé",
       "custo": 0,
-      "imagem": "tatico-064.png"
+      "imagem": "tatico-064.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-065",
@@ -3356,7 +3448,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Fé",
       "custo": 0,
-      "imagem": "tatico-065.png"
+      "imagem": "tatico-065.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-066",
@@ -3368,7 +3462,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Fé",
       "custo": 0,
-      "imagem": "tatico-066.png"
+      "imagem": "tatico-066.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-067",
@@ -3380,7 +3476,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Fé",
       "custo": 0,
-      "imagem": "tatico-067.png"
+      "imagem": "tatico-067.png",
+      "cura": 2
     },
     {
       "id": "tatico-068",
@@ -3392,7 +3489,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Fé",
       "custo": 0,
-      "imagem": "tatico-068.png"
+      "imagem": "tatico-068.png",
+      "cura": 2
     },
     {
       "id": "tatico-069",
@@ -3404,7 +3502,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Fé",
       "custo": 0,
-      "imagem": "tatico-069.png"
+      "imagem": "tatico-069.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-070",
@@ -3416,7 +3515,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Fé",
       "custo": 0,
-      "imagem": "tatico-070.png"
+      "imagem": "tatico-070.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-071",
@@ -3428,7 +3528,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Fé",
       "custo": 0,
-      "imagem": "tatico-071.png"
+      "imagem": "tatico-071.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-072",
@@ -3440,7 +3541,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Fé",
       "custo": 0,
-      "imagem": "tatico-072.png"
+      "imagem": "tatico-072.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-073",
@@ -3452,7 +3554,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Fé",
       "custo": 0,
-      "imagem": "tatico-073.png"
+      "imagem": "tatico-073.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-074",
@@ -3464,7 +3567,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Fé",
       "custo": 0,
-      "imagem": "tatico-074.png"
+      "imagem": "tatico-074.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-075",
@@ -3476,7 +3580,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Fé",
       "custo": 0,
-      "imagem": "tatico-075.png"
+      "imagem": "tatico-075.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-076",
@@ -3488,7 +3593,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Milagre",
       "custo": 0,
-      "imagem": "tatico-076.png"
+      "imagem": "tatico-076.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-077",
@@ -3500,7 +3607,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Milagre",
       "custo": 0,
-      "imagem": "tatico-077.png"
+      "imagem": "tatico-077.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-078",
@@ -3512,7 +3621,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Milagre",
       "custo": 0,
-      "imagem": "tatico-078.png"
+      "imagem": "tatico-078.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-079",
@@ -3524,7 +3635,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Milagre",
       "custo": 0,
-      "imagem": "tatico-079.png"
+      "imagem": "tatico-079.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-080",
@@ -3536,7 +3649,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Milagre",
       "custo": 0,
-      "imagem": "tatico-080.png"
+      "imagem": "tatico-080.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-081",
@@ -3548,7 +3663,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Milagre",
       "custo": 0,
-      "imagem": "tatico-081.png"
+      "imagem": "tatico-081.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-082",
@@ -3560,7 +3677,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Milagre",
       "custo": 0,
-      "imagem": "tatico-082.png"
+      "imagem": "tatico-082.png",
+      "cura": 3
     },
     {
       "id": "tatico-083",
@@ -3572,7 +3690,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Milagre",
       "custo": 0,
-      "imagem": "tatico-083.png"
+      "imagem": "tatico-083.png",
+      "cura": 3
     },
     {
       "id": "tatico-084",
@@ -3584,7 +3703,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Milagre",
       "custo": 0,
-      "imagem": "tatico-084.png"
+      "imagem": "tatico-084.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-085",
@@ -3596,7 +3716,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Milagre",
       "custo": 0,
-      "imagem": "tatico-085.png"
+      "imagem": "tatico-085.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-086",
@@ -3608,7 +3729,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Milagre",
       "custo": 0,
-      "imagem": "tatico-086.png"
+      "imagem": "tatico-086.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-087",
@@ -3620,7 +3742,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Milagre",
       "custo": 0,
-      "imagem": "tatico-087.png"
+      "imagem": "tatico-087.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-088",
@@ -3632,7 +3755,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Milagre",
       "custo": 0,
-      "imagem": "tatico-088.png"
+      "imagem": "tatico-088.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-089",
@@ -3644,7 +3768,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Milagre",
       "custo": 0,
-      "imagem": "tatico-089.png"
+      "imagem": "tatico-089.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-090",
@@ -3656,7 +3781,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Milagre",
       "custo": 0,
-      "imagem": "tatico-090.png"
+      "imagem": "tatico-090.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-091",
@@ -3668,7 +3794,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Purificação",
       "custo": 0,
-      "imagem": "tatico-091.png"
+      "imagem": "tatico-091.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-092",
@@ -3680,7 +3808,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Purificação",
       "custo": 0,
-      "imagem": "tatico-092.png"
+      "imagem": "tatico-092.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-093",
@@ -3692,7 +3822,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Purificação",
       "custo": 0,
-      "imagem": "tatico-093.png"
+      "imagem": "tatico-093.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-094",
@@ -3704,7 +3836,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Purificação",
       "custo": 0,
-      "imagem": "tatico-094.png"
+      "imagem": "tatico-094.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-095",
@@ -3716,7 +3850,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Purificação",
       "custo": 0,
-      "imagem": "tatico-095.png"
+      "imagem": "tatico-095.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-096",
@@ -3728,7 +3864,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Purificação",
       "custo": 0,
-      "imagem": "tatico-096.png"
+      "imagem": "tatico-096.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-097",
@@ -3740,7 +3878,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Purificação",
       "custo": 0,
-      "imagem": "tatico-097.png"
+      "imagem": "tatico-097.png",
+      "cura": 2
     },
     {
       "id": "tatico-098",
@@ -3752,7 +3891,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Purificação",
       "custo": 0,
-      "imagem": "tatico-098.png"
+      "imagem": "tatico-098.png",
+      "cura": 2
     },
     {
       "id": "tatico-099",
@@ -3764,7 +3904,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Purificação",
       "custo": 0,
-      "imagem": "tatico-099.png"
+      "imagem": "tatico-099.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-100",
@@ -3776,7 +3917,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Purificação",
       "custo": 0,
-      "imagem": "tatico-100.png"
+      "imagem": "tatico-100.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-101",
@@ -3788,7 +3930,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Purificação",
       "custo": 0,
-      "imagem": "tatico-101.png"
+      "imagem": "tatico-101.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-102",
@@ -3800,7 +3943,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Purificação",
       "custo": 0,
-      "imagem": "tatico-102.png"
+      "imagem": "tatico-102.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-103",
@@ -3812,7 +3956,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Purificação",
       "custo": 0,
-      "imagem": "tatico-103.png"
+      "imagem": "tatico-103.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-104",
@@ -3824,7 +3969,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Purificação",
       "custo": 0,
-      "imagem": "tatico-104.png"
+      "imagem": "tatico-104.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-105",
@@ -3836,7 +3982,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Purificação",
       "custo": 0,
-      "imagem": "tatico-105.png"
+      "imagem": "tatico-105.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-106",
@@ -3848,7 +3995,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Ascensão",
       "custo": 0,
-      "imagem": "tatico-106.png"
+      "imagem": "tatico-106.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-107",
@@ -3860,7 +4009,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Ascensão",
       "custo": 0,
-      "imagem": "tatico-107.png"
+      "imagem": "tatico-107.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-108",
@@ -3872,7 +4023,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Ascensão",
       "custo": 0,
-      "imagem": "tatico-108.png"
+      "imagem": "tatico-108.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-109",
@@ -3884,7 +4037,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Ascensão",
       "custo": 0,
-      "imagem": "tatico-109.png"
+      "imagem": "tatico-109.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-110",
@@ -3896,7 +4051,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Ascensão",
       "custo": 0,
-      "imagem": "tatico-110.png"
+      "imagem": "tatico-110.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-111",
@@ -3908,7 +4065,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Ascensão",
       "custo": 0,
-      "imagem": "tatico-111.png"
+      "imagem": "tatico-111.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-112",
@@ -3920,7 +4079,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Ascensão",
       "custo": 0,
-      "imagem": "tatico-112.png"
+      "imagem": "tatico-112.png",
+      "cura": 3
     },
     {
       "id": "tatico-113",
@@ -3932,7 +4092,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Ascensão",
       "custo": 0,
-      "imagem": "tatico-113.png"
+      "imagem": "tatico-113.png",
+      "cura": 3
     },
     {
       "id": "tatico-114",
@@ -3944,7 +4105,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Ascensão",
       "custo": 0,
-      "imagem": "tatico-114.png"
+      "imagem": "tatico-114.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-115",
@@ -3956,7 +4118,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Ascensão",
       "custo": 0,
-      "imagem": "tatico-115.png"
+      "imagem": "tatico-115.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-116",
@@ -3968,7 +4131,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Ascensão",
       "custo": 0,
-      "imagem": "tatico-116.png"
+      "imagem": "tatico-116.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-117",
@@ -3980,7 +4144,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Ascensão",
       "custo": 0,
-      "imagem": "tatico-117.png"
+      "imagem": "tatico-117.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-118",
@@ -3992,7 +4157,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Ascensão",
       "custo": 0,
-      "imagem": "tatico-118.png"
+      "imagem": "tatico-118.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-119",
@@ -4004,7 +4170,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Ascensão",
       "custo": 0,
-      "imagem": "tatico-119.png"
+      "imagem": "tatico-119.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-120",
@@ -4016,7 +4183,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Ascensão",
       "custo": 0,
-      "imagem": "tatico-120.png"
+      "imagem": "tatico-120.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-121",
@@ -4028,7 +4196,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Raízes",
       "custo": 0,
-      "imagem": "tatico-121.png"
+      "imagem": "tatico-121.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-122",
@@ -4040,7 +4210,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Raízes",
       "custo": 0,
-      "imagem": "tatico-122.png"
+      "imagem": "tatico-122.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-123",
@@ -4052,7 +4224,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Raízes",
       "custo": 0,
-      "imagem": "tatico-123.png"
+      "imagem": "tatico-123.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-124",
@@ -4064,7 +4238,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Raízes",
       "custo": 0,
-      "imagem": "tatico-124.png"
+      "imagem": "tatico-124.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-125",
@@ -4076,7 +4252,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Raízes",
       "custo": 0,
-      "imagem": "tatico-125.png"
+      "imagem": "tatico-125.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-126",
@@ -4088,7 +4266,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Raízes",
       "custo": 0,
-      "imagem": "tatico-126.png"
+      "imagem": "tatico-126.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-127",
@@ -4100,7 +4280,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Raízes",
       "custo": 0,
-      "imagem": "tatico-127.png"
+      "imagem": "tatico-127.png",
+      "cura": 2
     },
     {
       "id": "tatico-128",
@@ -4112,7 +4293,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Raízes",
       "custo": 0,
-      "imagem": "tatico-128.png"
+      "imagem": "tatico-128.png",
+      "cura": 2
     },
     {
       "id": "tatico-129",
@@ -4124,7 +4306,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Raízes",
       "custo": 0,
-      "imagem": "tatico-129.png"
+      "imagem": "tatico-129.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-130",
@@ -4136,7 +4319,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Raízes",
       "custo": 0,
-      "imagem": "tatico-130.png"
+      "imagem": "tatico-130.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-131",
@@ -4148,7 +4332,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Raízes",
       "custo": 0,
-      "imagem": "tatico-131.png"
+      "imagem": "tatico-131.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-132",
@@ -4160,7 +4345,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Raízes",
       "custo": 0,
-      "imagem": "tatico-132.png"
+      "imagem": "tatico-132.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-133",
@@ -4172,7 +4358,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Raízes",
       "custo": 0,
-      "imagem": "tatico-133.png"
+      "imagem": "tatico-133.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-134",
@@ -4184,7 +4371,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Raízes",
       "custo": 0,
-      "imagem": "tatico-134.png"
+      "imagem": "tatico-134.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-135",
@@ -4196,7 +4384,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Raízes",
       "custo": 0,
-      "imagem": "tatico-135.png"
+      "imagem": "tatico-135.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-136",
@@ -4208,7 +4397,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Veneno",
       "custo": 0,
-      "imagem": "tatico-136.png"
+      "imagem": "tatico-136.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-137",
@@ -4220,7 +4411,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Veneno",
       "custo": 0,
-      "imagem": "tatico-137.png"
+      "imagem": "tatico-137.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-138",
@@ -4232,7 +4425,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Veneno",
       "custo": 0,
-      "imagem": "tatico-138.png"
+      "imagem": "tatico-138.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-139",
@@ -4244,7 +4439,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Veneno",
       "custo": 0,
-      "imagem": "tatico-139.png"
+      "imagem": "tatico-139.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-140",
@@ -4256,7 +4453,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Veneno",
       "custo": 0,
-      "imagem": "tatico-140.png"
+      "imagem": "tatico-140.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-141",
@@ -4268,7 +4467,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Veneno",
       "custo": 0,
-      "imagem": "tatico-141.png"
+      "imagem": "tatico-141.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-142",
@@ -4280,7 +4481,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Veneno",
       "custo": 0,
-      "imagem": "tatico-142.png"
+      "imagem": "tatico-142.png",
+      "cura": 3
     },
     {
       "id": "tatico-143",
@@ -4292,7 +4494,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Veneno",
       "custo": 0,
-      "imagem": "tatico-143.png"
+      "imagem": "tatico-143.png",
+      "cura": 3
     },
     {
       "id": "tatico-144",
@@ -4304,7 +4507,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Veneno",
       "custo": 0,
-      "imagem": "tatico-144.png"
+      "imagem": "tatico-144.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-145",
@@ -4316,7 +4520,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Veneno",
       "custo": 0,
-      "imagem": "tatico-145.png"
+      "imagem": "tatico-145.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-146",
@@ -4328,7 +4533,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Veneno",
       "custo": 0,
-      "imagem": "tatico-146.png"
+      "imagem": "tatico-146.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-147",
@@ -4340,7 +4546,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Veneno",
       "custo": 0,
-      "imagem": "tatico-147.png"
+      "imagem": "tatico-147.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-148",
@@ -4352,7 +4559,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Veneno",
       "custo": 0,
-      "imagem": "tatico-148.png"
+      "imagem": "tatico-148.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-149",
@@ -4364,7 +4572,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Veneno",
       "custo": 0,
-      "imagem": "tatico-149.png"
+      "imagem": "tatico-149.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-150",
@@ -4376,7 +4585,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Veneno",
       "custo": 0,
-      "imagem": "tatico-150.png"
+      "imagem": "tatico-150.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-151",
@@ -4388,7 +4598,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Clima",
       "custo": 0,
-      "imagem": "tatico-151.png"
+      "imagem": "tatico-151.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-152",
@@ -4400,7 +4612,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Clima",
       "custo": 0,
-      "imagem": "tatico-152.png"
+      "imagem": "tatico-152.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-153",
@@ -4412,7 +4626,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Clima",
       "custo": 0,
-      "imagem": "tatico-153.png"
+      "imagem": "tatico-153.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-154",
@@ -4424,7 +4640,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Clima",
       "custo": 0,
-      "imagem": "tatico-154.png"
+      "imagem": "tatico-154.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-155",
@@ -4436,7 +4654,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Clima",
       "custo": 0,
-      "imagem": "tatico-155.png"
+      "imagem": "tatico-155.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-156",
@@ -4448,7 +4668,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Clima",
       "custo": 0,
-      "imagem": "tatico-156.png"
+      "imagem": "tatico-156.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-157",
@@ -4460,7 +4682,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Clima",
       "custo": 0,
-      "imagem": "tatico-157.png"
+      "imagem": "tatico-157.png",
+      "cura": 2
     },
     {
       "id": "tatico-158",
@@ -4472,7 +4695,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Clima",
       "custo": 0,
-      "imagem": "tatico-158.png"
+      "imagem": "tatico-158.png",
+      "cura": 2
     },
     {
       "id": "tatico-159",
@@ -4484,7 +4708,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Clima",
       "custo": 0,
-      "imagem": "tatico-159.png"
+      "imagem": "tatico-159.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-160",
@@ -4496,7 +4721,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Clima",
       "custo": 0,
-      "imagem": "tatico-160.png"
+      "imagem": "tatico-160.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-161",
@@ -4508,7 +4734,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Clima",
       "custo": 0,
-      "imagem": "tatico-161.png"
+      "imagem": "tatico-161.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-162",
@@ -4520,7 +4747,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Clima",
       "custo": 0,
-      "imagem": "tatico-162.png"
+      "imagem": "tatico-162.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-163",
@@ -4532,7 +4760,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Clima",
       "custo": 0,
-      "imagem": "tatico-163.png"
+      "imagem": "tatico-163.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-164",
@@ -4544,7 +4773,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Clima",
       "custo": 0,
-      "imagem": "tatico-164.png"
+      "imagem": "tatico-164.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-165",
@@ -4556,7 +4786,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Clima",
       "custo": 0,
-      "imagem": "tatico-165.png"
+      "imagem": "tatico-165.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-166",
@@ -4568,7 +4799,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Selvagem",
       "custo": 0,
-      "imagem": "tatico-166.png"
+      "imagem": "tatico-166.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-167",
@@ -4580,7 +4813,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Selvagem",
       "custo": 0,
-      "imagem": "tatico-167.png"
+      "imagem": "tatico-167.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-168",
@@ -4592,7 +4827,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Selvagem",
       "custo": 0,
-      "imagem": "tatico-168.png"
+      "imagem": "tatico-168.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-169",
@@ -4604,7 +4841,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Selvagem",
       "custo": 0,
-      "imagem": "tatico-169.png"
+      "imagem": "tatico-169.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-170",
@@ -4616,7 +4855,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Selvagem",
       "custo": 0,
-      "imagem": "tatico-170.png"
+      "imagem": "tatico-170.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-171",
@@ -4628,7 +4869,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Selvagem",
       "custo": 0,
-      "imagem": "tatico-171.png"
+      "imagem": "tatico-171.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-172",
@@ -4640,7 +4883,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Selvagem",
       "custo": 0,
-      "imagem": "tatico-172.png"
+      "imagem": "tatico-172.png",
+      "cura": 3
     },
     {
       "id": "tatico-173",
@@ -4652,7 +4896,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Selvagem",
       "custo": 0,
-      "imagem": "tatico-173.png"
+      "imagem": "tatico-173.png",
+      "cura": 3
     },
     {
       "id": "tatico-174",
@@ -4664,7 +4909,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Selvagem",
       "custo": 0,
-      "imagem": "tatico-174.png"
+      "imagem": "tatico-174.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-175",
@@ -4676,7 +4922,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Selvagem",
       "custo": 0,
-      "imagem": "tatico-175.png"
+      "imagem": "tatico-175.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-176",
@@ -4688,7 +4935,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Selvagem",
       "custo": 0,
-      "imagem": "tatico-176.png"
+      "imagem": "tatico-176.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-177",
@@ -4700,7 +4948,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Selvagem",
       "custo": 0,
-      "imagem": "tatico-177.png"
+      "imagem": "tatico-177.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-178",
@@ -4712,7 +4961,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Selvagem",
       "custo": 0,
-      "imagem": "tatico-178.png"
+      "imagem": "tatico-178.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-179",
@@ -4724,7 +4974,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Selvagem",
       "custo": 0,
-      "imagem": "tatico-179.png"
+      "imagem": "tatico-179.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-180",
@@ -4736,7 +4987,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Selvagem",
       "custo": 0,
-      "imagem": "tatico-180.png"
+      "imagem": "tatico-180.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-181",
@@ -4748,7 +5000,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Corrupção",
       "custo": 0,
-      "imagem": "tatico-181.png"
+      "imagem": "tatico-181.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-182",
@@ -4760,7 +5014,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Corrupção",
       "custo": 0,
-      "imagem": "tatico-182.png"
+      "imagem": "tatico-182.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-183",
@@ -4772,7 +5028,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Corrupção",
       "custo": 0,
-      "imagem": "tatico-183.png"
+      "imagem": "tatico-183.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-184",
@@ -4784,7 +5042,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Corrupção",
       "custo": 0,
-      "imagem": "tatico-184.png"
+      "imagem": "tatico-184.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-185",
@@ -4796,7 +5056,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Corrupção",
       "custo": 0,
-      "imagem": "tatico-185.png"
+      "imagem": "tatico-185.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-186",
@@ -4808,7 +5070,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Corrupção",
       "custo": 0,
-      "imagem": "tatico-186.png"
+      "imagem": "tatico-186.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-187",
@@ -4820,7 +5084,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Corrupção",
       "custo": 0,
-      "imagem": "tatico-187.png"
+      "imagem": "tatico-187.png",
+      "cura": 2
     },
     {
       "id": "tatico-188",
@@ -4832,7 +5097,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Corrupção",
       "custo": 0,
-      "imagem": "tatico-188.png"
+      "imagem": "tatico-188.png",
+      "cura": 2
     },
     {
       "id": "tatico-189",
@@ -4844,7 +5110,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Corrupção",
       "custo": 0,
-      "imagem": "tatico-189.png"
+      "imagem": "tatico-189.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-190",
@@ -4856,7 +5123,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Corrupção",
       "custo": 0,
-      "imagem": "tatico-190.png"
+      "imagem": "tatico-190.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-191",
@@ -4868,7 +5136,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Corrupção",
       "custo": 0,
-      "imagem": "tatico-191.png"
+      "imagem": "tatico-191.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-192",
@@ -4880,7 +5149,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Corrupção",
       "custo": 0,
-      "imagem": "tatico-192.png"
+      "imagem": "tatico-192.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-193",
@@ -4892,7 +5162,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Corrupção",
       "custo": 0,
-      "imagem": "tatico-193.png"
+      "imagem": "tatico-193.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-194",
@@ -4904,7 +5175,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Corrupção",
       "custo": 0,
-      "imagem": "tatico-194.png"
+      "imagem": "tatico-194.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-195",
@@ -4916,7 +5188,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Corrupção",
       "custo": 0,
-      "imagem": "tatico-195.png"
+      "imagem": "tatico-195.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-196",
@@ -4928,7 +5201,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Pacto",
       "custo": 0,
-      "imagem": "tatico-196.png"
+      "imagem": "tatico-196.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-197",
@@ -4940,7 +5215,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Pacto",
       "custo": 0,
-      "imagem": "tatico-197.png"
+      "imagem": "tatico-197.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-198",
@@ -4952,7 +5229,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Pacto",
       "custo": 0,
-      "imagem": "tatico-198.png"
+      "imagem": "tatico-198.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-199",
@@ -4964,7 +5243,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Pacto",
       "custo": 0,
-      "imagem": "tatico-199.png"
+      "imagem": "tatico-199.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-200",
@@ -4976,7 +5257,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Pacto",
       "custo": 0,
-      "imagem": "tatico-200.png"
+      "imagem": "tatico-200.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-201",
@@ -4988,7 +5271,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Pacto",
       "custo": 0,
-      "imagem": "tatico-201.png"
+      "imagem": "tatico-201.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-202",
@@ -5000,7 +5285,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Pacto",
       "custo": 0,
-      "imagem": "tatico-202.png"
+      "imagem": "tatico-202.png",
+      "cura": 3
     },
     {
       "id": "tatico-203",
@@ -5012,7 +5298,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Pacto",
       "custo": 0,
-      "imagem": "tatico-203.png"
+      "imagem": "tatico-203.png",
+      "cura": 3
     },
     {
       "id": "tatico-204",
@@ -5024,7 +5311,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Pacto",
       "custo": 0,
-      "imagem": "tatico-204.png"
+      "imagem": "tatico-204.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-205",
@@ -5036,7 +5324,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Pacto",
       "custo": 0,
-      "imagem": "tatico-205.png"
+      "imagem": "tatico-205.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-206",
@@ -5048,7 +5337,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Pacto",
       "custo": 0,
-      "imagem": "tatico-206.png"
+      "imagem": "tatico-206.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-207",
@@ -5060,7 +5350,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Pacto",
       "custo": 0,
-      "imagem": "tatico-207.png"
+      "imagem": "tatico-207.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-208",
@@ -5072,7 +5363,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Pacto",
       "custo": 0,
-      "imagem": "tatico-208.png"
+      "imagem": "tatico-208.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-209",
@@ -5084,7 +5376,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Pacto",
       "custo": 0,
-      "imagem": "tatico-209.png"
+      "imagem": "tatico-209.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-210",
@@ -5096,7 +5389,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Pacto",
       "custo": 0,
-      "imagem": "tatico-210.png"
+      "imagem": "tatico-210.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-211",
@@ -5108,7 +5402,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Escuridão",
       "custo": 0,
-      "imagem": "tatico-211.png"
+      "imagem": "tatico-211.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-212",
@@ -5120,7 +5416,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Escuridão",
       "custo": 0,
-      "imagem": "tatico-212.png"
+      "imagem": "tatico-212.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-213",
@@ -5132,7 +5430,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Escuridão",
       "custo": 0,
-      "imagem": "tatico-213.png"
+      "imagem": "tatico-213.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-214",
@@ -5144,7 +5444,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Escuridão",
       "custo": 0,
-      "imagem": "tatico-214.png"
+      "imagem": "tatico-214.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-215",
@@ -5156,7 +5458,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Escuridão",
       "custo": 0,
-      "imagem": "tatico-215.png"
+      "imagem": "tatico-215.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-216",
@@ -5168,7 +5472,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Escuridão",
       "custo": 0,
-      "imagem": "tatico-216.png"
+      "imagem": "tatico-216.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-217",
@@ -5180,7 +5486,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Escuridão",
       "custo": 0,
-      "imagem": "tatico-217.png"
+      "imagem": "tatico-217.png",
+      "cura": 2
     },
     {
       "id": "tatico-218",
@@ -5192,7 +5499,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Escuridão",
       "custo": 0,
-      "imagem": "tatico-218.png"
+      "imagem": "tatico-218.png",
+      "cura": 2
     },
     {
       "id": "tatico-219",
@@ -5204,7 +5512,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Escuridão",
       "custo": 0,
-      "imagem": "tatico-219.png"
+      "imagem": "tatico-219.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-220",
@@ -5216,7 +5525,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Escuridão",
       "custo": 0,
-      "imagem": "tatico-220.png"
+      "imagem": "tatico-220.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-221",
@@ -5228,7 +5538,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Escuridão",
       "custo": 0,
-      "imagem": "tatico-221.png"
+      "imagem": "tatico-221.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-222",
@@ -5240,7 +5551,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Escuridão",
       "custo": 0,
-      "imagem": "tatico-222.png"
+      "imagem": "tatico-222.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-223",
@@ -5252,7 +5564,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Escuridão",
       "custo": 0,
-      "imagem": "tatico-223.png"
+      "imagem": "tatico-223.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-224",
@@ -5264,7 +5577,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Escuridão",
       "custo": 0,
-      "imagem": "tatico-224.png"
+      "imagem": "tatico-224.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-225",
@@ -5276,7 +5590,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Escuridão",
       "custo": 0,
-      "imagem": "tatico-225.png"
+      "imagem": "tatico-225.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-226",
@@ -5288,7 +5603,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Perdição",
       "custo": 0,
-      "imagem": "tatico-226.png"
+      "imagem": "tatico-226.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-227",
@@ -5300,7 +5617,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Perdição",
       "custo": 0,
-      "imagem": "tatico-227.png"
+      "imagem": "tatico-227.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-228",
@@ -5312,7 +5631,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Perdição",
       "custo": 0,
-      "imagem": "tatico-228.png"
+      "imagem": "tatico-228.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-229",
@@ -5324,7 +5645,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Perdição",
       "custo": 0,
-      "imagem": "tatico-229.png"
+      "imagem": "tatico-229.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-230",
@@ -5336,7 +5659,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Perdição",
       "custo": 0,
-      "imagem": "tatico-230.png"
+      "imagem": "tatico-230.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-231",
@@ -5348,7 +5673,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Perdição",
       "custo": 0,
-      "imagem": "tatico-231.png"
+      "imagem": "tatico-231.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-232",
@@ -5360,7 +5687,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Perdição",
       "custo": 0,
-      "imagem": "tatico-232.png"
+      "imagem": "tatico-232.png",
+      "cura": 3
     },
     {
       "id": "tatico-233",
@@ -5372,7 +5700,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Perdição",
       "custo": 0,
-      "imagem": "tatico-233.png"
+      "imagem": "tatico-233.png",
+      "cura": 3
     },
     {
       "id": "tatico-234",
@@ -5384,7 +5713,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Perdição",
       "custo": 0,
-      "imagem": "tatico-234.png"
+      "imagem": "tatico-234.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-235",
@@ -5396,7 +5726,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Perdição",
       "custo": 0,
-      "imagem": "tatico-235.png"
+      "imagem": "tatico-235.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-236",
@@ -5408,7 +5739,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Perdição",
       "custo": 0,
-      "imagem": "tatico-236.png"
+      "imagem": "tatico-236.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-237",
@@ -5420,7 +5752,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Perdição",
       "custo": 0,
-      "imagem": "tatico-237.png"
+      "imagem": "tatico-237.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-238",
@@ -5432,7 +5765,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Perdição",
       "custo": 0,
-      "imagem": "tatico-238.png"
+      "imagem": "tatico-238.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-239",
@@ -5444,7 +5778,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Perdição",
       "custo": 0,
-      "imagem": "tatico-239.png"
+      "imagem": "tatico-239.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-240",
@@ -5456,7 +5791,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Perdição",
       "custo": 0,
-      "imagem": "tatico-240.png"
+      "imagem": "tatico-240.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-241",
@@ -5468,7 +5804,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-241.png"
+      "imagem": "tatico-241.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-242",
@@ -5480,7 +5818,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-242.png"
+      "imagem": "tatico-242.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-243",
@@ -5492,7 +5832,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-243.png"
+      "imagem": "tatico-243.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-244",
@@ -5504,7 +5846,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-244.png"
+      "imagem": "tatico-244.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-245",
@@ -5516,7 +5860,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-245.png"
+      "imagem": "tatico-245.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-246",
@@ -5528,7 +5874,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-246.png"
+      "imagem": "tatico-246.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-247",
@@ -5540,7 +5888,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-247.png"
+      "imagem": "tatico-247.png",
+      "cura": 2
     },
     {
       "id": "tatico-248",
@@ -5552,7 +5901,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-248.png"
+      "imagem": "tatico-248.png",
+      "cura": 2
     },
     {
       "id": "tatico-249",
@@ -5564,7 +5914,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-249.png"
+      "imagem": "tatico-249.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-250",
@@ -5576,7 +5927,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-250.png"
+      "imagem": "tatico-250.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-251",
@@ -5588,7 +5940,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-251.png"
+      "imagem": "tatico-251.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-252",
@@ -5600,7 +5953,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-252.png"
+      "imagem": "tatico-252.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-253",
@@ -5612,7 +5966,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-253.png"
+      "imagem": "tatico-253.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-254",
@@ -5624,7 +5979,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-254.png"
+      "imagem": "tatico-254.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-255",
@@ -5636,7 +5992,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Tecnologia",
       "custo": 0,
-      "imagem": "tatico-255.png"
+      "imagem": "tatico-255.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-256",
@@ -5648,7 +6005,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Reparação",
       "custo": 0,
-      "imagem": "tatico-256.png"
+      "imagem": "tatico-256.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-257",
@@ -5660,7 +6019,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Reparação",
       "custo": 0,
-      "imagem": "tatico-257.png"
+      "imagem": "tatico-257.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-258",
@@ -5672,7 +6033,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Reparação",
       "custo": 0,
-      "imagem": "tatico-258.png"
+      "imagem": "tatico-258.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-259",
@@ -5684,7 +6047,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Reparação",
       "custo": 0,
-      "imagem": "tatico-259.png"
+      "imagem": "tatico-259.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-260",
@@ -5696,7 +6061,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Reparação",
       "custo": 0,
-      "imagem": "tatico-260.png"
+      "imagem": "tatico-260.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-261",
@@ -5708,7 +6075,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Reparação",
       "custo": 0,
-      "imagem": "tatico-261.png"
+      "imagem": "tatico-261.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-262",
@@ -5720,7 +6089,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Reparação",
       "custo": 0,
-      "imagem": "tatico-262.png"
+      "imagem": "tatico-262.png",
+      "cura": 3
     },
     {
       "id": "tatico-263",
@@ -5732,7 +6102,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Reparação",
       "custo": 0,
-      "imagem": "tatico-263.png"
+      "imagem": "tatico-263.png",
+      "cura": 3
     },
     {
       "id": "tatico-264",
@@ -5744,7 +6115,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Reparação",
       "custo": 0,
-      "imagem": "tatico-264.png"
+      "imagem": "tatico-264.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-265",
@@ -5756,7 +6128,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Reparação",
       "custo": 0,
-      "imagem": "tatico-265.png"
+      "imagem": "tatico-265.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-266",
@@ -5768,7 +6141,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Reparação",
       "custo": 0,
-      "imagem": "tatico-266.png"
+      "imagem": "tatico-266.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-267",
@@ -5780,7 +6154,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Reparação",
       "custo": 0,
-      "imagem": "tatico-267.png"
+      "imagem": "tatico-267.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-268",
@@ -5792,7 +6167,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Reparação",
       "custo": 0,
-      "imagem": "tatico-268.png"
+      "imagem": "tatico-268.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-269",
@@ -5804,7 +6180,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Reparação",
       "custo": 0,
-      "imagem": "tatico-269.png"
+      "imagem": "tatico-269.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-270",
@@ -5816,7 +6193,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Reparação",
       "custo": 0,
-      "imagem": "tatico-270.png"
+      "imagem": "tatico-270.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-271",
@@ -5828,7 +6206,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-271.png"
+      "imagem": "tatico-271.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-272",
@@ -5840,7 +6220,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-272.png"
+      "imagem": "tatico-272.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-273",
@@ -5852,7 +6234,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-273.png"
+      "imagem": "tatico-273.png",
+      "bonus_ataque": 1,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-274",
@@ -5864,7 +6248,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-274.png"
+      "imagem": "tatico-274.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-275",
@@ -5876,7 +6262,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-275.png"
+      "imagem": "tatico-275.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-276",
@@ -5888,7 +6276,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-276.png"
+      "imagem": "tatico-276.png",
+      "dano": 3,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-277",
@@ -5900,7 +6290,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-277.png"
+      "imagem": "tatico-277.png",
+      "cura": 2
     },
     {
       "id": "tatico-278",
@@ -5912,7 +6303,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-278.png"
+      "imagem": "tatico-278.png",
+      "cura": 2
     },
     {
       "id": "tatico-279",
@@ -5924,7 +6316,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-279.png"
+      "imagem": "tatico-279.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-280",
@@ -5936,7 +6329,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-280.png"
+      "imagem": "tatico-280.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-281",
@@ -5948,7 +6342,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-281.png"
+      "imagem": "tatico-281.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-282",
@@ -5960,7 +6355,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-282.png"
+      "imagem": "tatico-282.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-283",
@@ -5972,7 +6368,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-283.png"
+      "imagem": "tatico-283.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-284",
@@ -5984,7 +6381,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-284.png"
+      "imagem": "tatico-284.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-285",
@@ -5996,7 +6394,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Sobrecarga",
       "custo": 0,
-      "imagem": "tatico-285.png"
+      "imagem": "tatico-285.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-286",
@@ -6008,7 +6407,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Evolução",
       "custo": 0,
-      "imagem": "tatico-286.png"
+      "imagem": "tatico-286.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-287",
@@ -6020,7 +6421,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Evolução",
       "custo": 0,
-      "imagem": "tatico-287.png"
+      "imagem": "tatico-287.png",
+      "bonus_ataque": 3,
+      "bonus_vida": 0
     },
     {
       "id": "tatico-288",
@@ -6032,7 +6435,9 @@
       "efeito_nome": "Efeito Equipamento",
       "efeito_descricao": "Carta tática: equipamento da Evolução",
       "custo": 0,
-      "imagem": "tatico-288.png"
+      "imagem": "tatico-288.png",
+      "bonus_ataque": 2,
+      "bonus_vida": 1
     },
     {
       "id": "tatico-289",
@@ -6044,7 +6449,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Evolução",
       "custo": 0,
-      "imagem": "tatico-289.png"
+      "imagem": "tatico-289.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-290",
@@ -6056,7 +6463,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Evolução",
       "custo": 0,
-      "imagem": "tatico-290.png"
+      "imagem": "tatico-290.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-291",
@@ -6068,7 +6477,9 @@
       "efeito_nome": "Efeito Magia",
       "efeito_descricao": "Carta tática: magia da Evolução",
       "custo": 0,
-      "imagem": "tatico-291.png"
+      "imagem": "tatico-291.png",
+      "dano": 4,
+      "alvo": "inimigo"
     },
     {
       "id": "tatico-292",
@@ -6080,7 +6491,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Evolução",
       "custo": 0,
-      "imagem": "tatico-292.png"
+      "imagem": "tatico-292.png",
+      "cura": 3
     },
     {
       "id": "tatico-293",
@@ -6092,7 +6504,8 @@
       "efeito_nome": "Efeito Consumível",
       "efeito_descricao": "Carta tática: consumível da Evolução",
       "custo": 0,
-      "imagem": "tatico-293.png"
+      "imagem": "tatico-293.png",
+      "cura": 3
     },
     {
       "id": "tatico-294",
@@ -6104,7 +6517,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Evolução",
       "custo": 0,
-      "imagem": "tatico-294.png"
+      "imagem": "tatico-294.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-295",
@@ -6116,7 +6530,8 @@
       "efeito_nome": "Efeito Construção",
       "efeito_descricao": "Carta tática: construção da Evolução",
       "custo": 0,
-      "imagem": "tatico-295.png"
+      "imagem": "tatico-295.png",
+      "vida_construcao": 8
     },
     {
       "id": "tatico-296",
@@ -6128,7 +6543,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Evolução",
       "custo": 0,
-      "imagem": "tatico-296.png"
+      "imagem": "tatico-296.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-297",
@@ -6140,7 +6556,8 @@
       "efeito_nome": "Efeito Clima",
       "efeito_descricao": "Carta tática: clima da Evolução",
       "custo": 0,
-      "imagem": "tatico-297.png"
+      "imagem": "tatico-297.png",
+      "duracao_turnos": 3
     },
     {
       "id": "tatico-298",
@@ -6152,7 +6569,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Evolução",
       "custo": 0,
-      "imagem": "tatico-298.png"
+      "imagem": "tatico-298.png",
+      "tipo_efeito": "bencao"
     },
     {
       "id": "tatico-299",
@@ -6164,7 +6582,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Evolução",
       "custo": 0,
-      "imagem": "tatico-299.png"
+      "imagem": "tatico-299.png",
+      "tipo_efeito": "maldicao"
     },
     {
       "id": "tatico-300",
@@ -6176,7 +6595,8 @@
       "efeito_nome": "Efeito Bênção",
       "efeito_descricao": "Carta tática: bênção da Evolução",
       "custo": 0,
-      "imagem": "tatico-300.png"
+      "imagem": "tatico-300.png",
+      "tipo_efeito": "bencao"
     }
   ]
 }

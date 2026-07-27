@@ -539,6 +539,11 @@ class GameEngine {
       // Equipar
       p.tacticoHand.splice(tacticoHandIndex, 1);
       targetCard.equipamentos.push(cardDef);
+
+      // Aplicar bônus
+      if (cardDef.bonus_ataque) targetCard.permBuffAtk += cardDef.bonus_ataque;
+      if (cardDef.bonus_vida) targetCard.vidaMaxima += cardDef.bonus_vida; targetCard.vidaAtual += cardDef.bonus_vida;
+
       this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} equipaste ${cardDef.nome} em ${targetCard.nome}.`);
 
       // Recarrega baralho tático
@@ -590,6 +595,34 @@ class GameEngine {
 
     this._checkAutoAdvance(ownerId);
     return { ok: true, card: cardDef };
+  }
+
+  removeEquipamento(cardUid, equipamentoIdx) {
+    const card = this.allCards().find(c => c.uid === cardUid);
+    if (!card || !card.equipamentos || !card.equipamentos[equipamentoIdx]) return { ok: false };
+
+    const equip = card.equipamentos[equipamentoIdx];
+    card.equipamentos.splice(equipamentoIdx, 1);
+
+    // Remover bônus
+    if (equip.bonus_ataque) card.permBuffAtk -= equip.bonus_ataque;
+    if (equip.bonus_vida) {
+      card.vidaMaxima -= equip.bonus_vida;
+      card.vidaAtual = Math.min(card.vidaAtual, card.vidaMaxima);
+    }
+
+    this.log(`${card.ownerId === 'player' ? 'Tu' : 'Adversário'} removeste ${equip.nome} de ${card.nome}.`);
+    return { ok: true };
+  }
+
+  allCards() {
+    const cards = [];
+    ['player', 'ai'].forEach(id => {
+      this.players[id].front.forEach(c => c && cards.push(c));
+      this.players[id].back.forEach(c => c && cards.push(c));
+      this.players[id].graveyard.forEach(c => c && cards.push(c));
+    });
+    return cards;
   }
 
   pass(ownerId) {
