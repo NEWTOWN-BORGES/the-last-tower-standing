@@ -521,6 +521,57 @@ class GameEngine {
     return { ok: true };
   }
 
+  playTacticoCard(ownerId, tacticoHandIndex, targetSpec) {
+    if (this.phase !== 'placement' || this.activePlayer !== ownerId) return { ok: false, error: 'não é a tua vez' };
+    const p = this.players[ownerId];
+    const cardDef = p.tacticoHand[tacticoHandIndex];
+    if (!cardDef) return { ok: false, error: 'carta tática inválida' };
+
+    p.tacticoHand.splice(tacticoHandIndex, 1);
+    const tipo = cardDef.tipo_tatico;
+
+    // Tira uma nova carta tática do baralho (se houver)
+    if (p.tacticoDeck.length > 0) {
+      p.tacticoHand.push(p.tacticoDeck.shift());
+    }
+
+    // Por enquanto, apenas log e descarta (sem efeitos específicos ainda)
+    // Estrutura para expansão futura:
+    switch (tipo) {
+      case 'Equipamento':
+        // TODO: equipar a uma unidade
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} jogaste o Equipamento ${cardDef.nome}.`);
+        break;
+      case 'Magia':
+        // TODO: aplicar efeito de magia
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} lançaste a Magia ${cardDef.nome}.`);
+        break;
+      case 'Consumível':
+        // TODO: usar e descartar
+        p.tacticoGraveyard.push(cardDef);
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} usaste ${cardDef.nome}.`);
+        break;
+      case 'Construção':
+        // TODO: colocar no campo (adicionar a activeTactics)
+        p.activeTactics.push({ ...cardDef, vidaAtual: 10, ownerId });
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} colocaste a Construção ${cardDef.nome}.`);
+        break;
+      case 'Clima':
+        // TODO: efeito global de clima
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} ativaste o Clima ${cardDef.nome}.`);
+        break;
+      case 'Bênção':
+        // TODO: efeito de bênção/maldição
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} invocaste ${cardDef.nome}.`);
+        break;
+      default:
+        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} jogaste ${cardDef.nome}.`);
+    }
+
+    this._checkAutoAdvance(ownerId);
+    return { ok: true, card: cardDef };
+  }
+
   pass(ownerId) {
     if (this.phase !== 'placement' || this.activePlayer !== ownerId) return { ok: false };
     this.players[ownerId].donePlacing = true;

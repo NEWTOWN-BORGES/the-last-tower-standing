@@ -249,8 +249,29 @@
   }
 
   function previewTacticoCard(cardDef, idx) {
-    showZoomReadOnly(`assets/taticos-3d/${cardDef.imagem}`);
     Sound.click();
+    const myTurn = engine.phase === 'placement' && engine.activePlayer === 'player' && !busy;
+    zoomImg.src = `assets/taticos-3d/${cardDef.imagem}`;
+    zoomActions.classList.remove('hidden');
+    zoomPlayBtn.classList.toggle('hidden', !myTurn);
+    zoomOverlay.classList.remove('hidden');
+    zoomPlayBtn.onclick = (ev) => {
+      ev.stopPropagation();
+      zoomOverlay.classList.add('hidden');
+      playTactico(idx, cardDef);
+    };
+    zoomCancelBtn.onclick = (ev) => { ev.stopPropagation(); zoomOverlay.classList.add('hidden'); };
+  }
+
+  function playTactico(idx, cardDef) {
+    const result = engine.playTacticoCard('player', idx, {});
+    if (!result.ok) {
+      console.warn('Erro ao jogar tática:', result.error);
+      Sound.error();
+      return;
+    }
+    Sound.apoioCast(); // som temporário, depois customizar por tipo
+    render();
   }
 
   function anyOpenSlot(cardDef) {
