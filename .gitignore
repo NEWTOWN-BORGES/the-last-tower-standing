@@ -1,0 +1,9 @@
+node_modules/
+server.log
+scratch_shots/
+
+# pacote antigo/paralelo (lore e mecânicas diferentes, não faz parte deste prototipo)
+CORREDOR_COMPLETO/
+CORREDOR_COMPLETO.zip
+files/
+files.zip

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CORREDOR</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="menu-screen" class="screen">
+    <div class="menu-card">
+      <h1 class="brand-title">CORREDOR</h1>
+      <p class="brand-sub">Escolhe a tua facção</p>
+      <div id="faction-list" class="faction-list"></div>
+      <button type="button" id="btn-start" class="btn-ember" disabled>Entrar no Corredor</button>
+    </div>
+  </div>
+
+  <div id="game-screen" class="screen hidden">
+    <div class="rotate-hint">
+      <div class="icon">📱</div>
+      <p>Roda o telemóvel para o modo paisagem — o Corredor joga-se melhor assim.</p>
+    </div>
+
+    <div class="board">
+
+      <!-- Torre do adversário -->
+      <div class="tower-bar tower-ai">
+        <span class="tower-label">Torre</span>
+        <div class="tower-track"><div class="tower-fill" id="tower-fill-ai"></div></div>
+        <span class="tower-hp" id="tower-hp-ai">30/30</span>
+      </div>
+
+      <!-- Adversário -->
+      <div class="rank enemy-back" id="rank-enemy-back"></div>
+      <div class="rank enemy-front" id="rank-enemy-front"></div>
+
+      <!-- Jogador -->
+      <div class="rank player-front" id="rank-player-front"></div>
+      <div class="rank player-back" id="rank-player-back"></div>
+
+      <!-- Torre do jogador -->
+      <div class="tower-bar tower-player">
+        <span class="tower-label">Torre</span>
+        <div class="tower-track"><div class="tower-fill" id="tower-fill-player"></div></div>
+        <span class="tower-hp" id="tower-hp-player">30/30</span>
+      </div>
+    </div>
+
+    <!-- HUD -->
+    <div class="hud-top">
+      <div class="hud-round">Turno <span id="round-num">1</span> / 12</div>
+      <div class="hud-turn" id="turn-indicator">A tua vez</div>
+      <div class="hud-cap">Unidades: <span id="unit-cap-num">0/3</span></div>
+    </div>
+
+    <button type="button" id="btn-log" class="btn-icon" title="Registo">📜</button>
+    <div id="log-panel" class="log-panel hidden"></div>
+
+    <!-- Mão -->
+    <div class="hand-bar">
+      <div class="hand-cards" id="hand-cards"></div>
+      <button type="button" id="btn-pass" class="btn-ember btn-pass">Passar</button>
+    </div>
+
+    <!-- Card ampliada / inspeção / preview antes de jogar -->
+    <div id="zoom-overlay" class="zoom-overlay hidden">
+      <img id="zoom-img" src="" alt="">
+      <div id="zoom-actions" class="zoom-actions hidden">
+        <button type="button" id="zoom-play" class="btn-ember">Jogar</button>
+        <button type="button" id="zoom-cancel" class="btn-ember btn-ghost">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Escolha de alvo -->
+    <div id="target-overlay" class="target-overlay hidden">
+      <div class="target-prompt" id="target-prompt-text">Escolhe um alvo</div>
+      <button type="button" id="target-cancel" class="btn-ember btn-ghost">Cancelar</button>
+    </div>
+
+    <!-- Fim de jogo -->
+    <div id="gameover-overlay" class="gameover-overlay hidden">
+      <div class="gameover-card">
+        <h2 id="gameover-title">Vitória</h2>
+        <p id="gameover-sub"></p>
+        <button type="button" id="btn-restart" class="btn-ember">Jogar Outra Vez</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/sound.js"></script>
+  <script src="js/ability-engine.js"></script>
+  <script src="js/game-engine.js"></script>
+  <script src="js/deck-builder.js"></script>
+  <script src="js/ai-player.js"></script>
+  <script src="js/ui-controller.js"></script>
+</body>
+</html>
