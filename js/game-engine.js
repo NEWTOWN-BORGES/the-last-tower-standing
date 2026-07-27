@@ -99,8 +99,8 @@ class GameEngine {
     this.players.ai.hasSombra = aiDeck.some(c => c.alinhamento === 'SOMBRA');
     this.players.player.cohesionBroken = this._computeCohesionBroken(playerDeck);
     this.players.ai.cohesionBroken = this._computeCohesionBroken(aiDeck);
-    this._drawCard('player', 5);
-    this._drawCard('ai', 5);
+    this._drawInitialHand('player');
+    this._drawInitialHand('ai');
     this._runTurnStartTriggers();
   }
 
@@ -267,6 +267,41 @@ class GameEngine {
     }
   }
   drawCard(ownerId, n) { this._drawCard(ownerId, n); }
+
+  _drawInitialHand(ownerId) {
+    const p = this.players[ownerId];
+    const frontIndices = [];
+    for (let i = 0; i < p.deck.length && frontIndices.length < 4; i++) {
+      if (FRONT_ROLES.has(p.deck[i].papel)) {
+        frontIndices.push(i);
+      }
+    }
+
+    const backIndices = [];
+    for (let i = 0; i < p.deck.length && backIndices.length < 2; i++) {
+      if (!frontIndices.includes(i) && BACK_ROLES.has(p.deck[i].papel)) {
+        backIndices.push(i);
+      }
+    }
+
+    const selectedIndices = new Set([...frontIndices, ...backIndices]);
+    const selectedCards = [];
+    const remainingDeck = [];
+    p.deck.forEach((card, index) => {
+      if (selectedIndices.has(index)) {
+        selectedCards.push(card);
+      } else {
+        remainingDeck.push(card);
+      }
+    });
+
+    p.hand.push(...selectedCards);
+    p.deck = remainingDeck;
+
+    if (p.hand.length < 6) {
+      this._drawCard(ownerId, 6 - p.hand.length);
+    }
+  }
 
   grantExtraUnitCap(ownerId, n) { this.players[ownerId].extraUnitCap += n; }
   grantFreeNextUnit(ownerId) { this.players[ownerId].freeNextUnit = true; }
