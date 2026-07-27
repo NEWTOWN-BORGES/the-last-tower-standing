@@ -99,8 +99,10 @@ class GameEngine {
     this.players.ai.hasSombra = aiDeck.some(c => c.alinhamento === 'SOMBRA');
     this.players.player.cohesionBroken = this._computeCohesionBroken(playerDeck);
     this.players.ai.cohesionBroken = this._computeCohesionBroken(aiDeck);
-    this._drawInitialHand('player');
-    this._drawInitialHand('ai');
+    this._autoDeployStartingBoard('player');
+    this._autoDeployStartingBoard('ai');
+    this._drawCard('player', 5);
+    this._drawCard('ai', 5);
     this._runTurnStartTriggers();
   }
 
@@ -268,7 +270,7 @@ class GameEngine {
   }
   drawCard(ownerId, n) { this._drawCard(ownerId, n); }
 
-  _drawInitialHand(ownerId) {
+  _autoDeployStartingBoard(ownerId) {
     const p = this.players[ownerId];
     const frontIndices = [];
     for (let i = 0; i < p.deck.length && frontIndices.length < 4; i++) {
@@ -284,23 +286,42 @@ class GameEngine {
       }
     }
 
-    const selectedIndices = new Set([...frontIndices, ...backIndices]);
-    const selectedCards = [];
+    const frontCardsToDeploy = [];
+    const backCardsToDeploy = [];
     const remainingDeck = [];
-    p.deck.forEach((card, index) => {
-      if (selectedIndices.has(index)) {
-        selectedCards.push(card);
+
+    p.deck.forEach((cardDef, index) => {
+      if (frontIndices.includes(index)) {
+        frontCardsToDeploy.push(cardDef);
+      } else if (backIndices.includes(index)) {
+        backCardsToDeploy.push(cardDef);
       } else {
-        remainingDeck.push(card);
+        remainingDeck.push(cardDef);
       }
     });
-
-    p.hand.push(...selectedCards);
     p.deck = remainingDeck;
 
-    if (p.hand.length < 6) {
-      this._drawCard(ownerId, 6 - p.hand.length);
-    }
+    const availableFrontSlots = shuffle([0, 1, 2, 3, 4, 5]);
+    frontCardsToDeploy.forEach((cardDef, i) => {
+      const slotIndex = availableFrontSlots[i];
+      const card = this._instantiate(cardDef, ownerId);
+      card.slotType = 'frente';
+      card.slotIndex = slotIndex;
+      p.front[slotIndex] = card;
+      this._onEnterLaneDebuffHooks(card);
+      this._runTrigger(card, 'onEnter');
+    });
+
+    const availableBackSlots = shuffle([1, 2, 3, 4]);
+    backCardsToDeploy.forEach((cardDef, i) => {
+      const slotIndex = availableBackSlots[i];
+      const card = this._instantiate(cardDef, ownerId);
+      card.slotType = 'retaguarda';
+      card.slotIndex = slotIndex;
+      p.back[slotIndex] = card;
+      this._onEnterLaneDebuffHooks(card);
+      this._runTrigger(card, 'onEnter');
+    });
   }
 
   grantExtraUnitCap(ownerId, n) { this.players[ownerId].extraUnitCap += n; }
