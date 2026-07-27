@@ -441,7 +441,8 @@ class GameEngine {
       usedSecondLife: false,
       ownerId,
       isApoio: false,
-      slotType: null, slotIndex: null
+      slotType: null, slotIndex: null,
+      equipamentos: [] // cartas de equipamento acopladas
     };
   }
 
@@ -527,20 +528,39 @@ class GameEngine {
     const cardDef = p.tacticoHand[tacticoHandIndex];
     if (!cardDef) return { ok: false, error: 'carta tática inválida' };
 
-    p.tacticoHand.splice(tacticoHandIndex, 1);
     const tipo = cardDef.tipo_tatico;
+
+    // Equipamentos precisam de alvo
+    if (tipo === 'Equipamento') {
+      if (!targetSpec || !targetSpec.targetCard) return { ok: false, error: 'escolhe uma unidade para equipar', needsTarget: 'card' };
+      const targetCard = targetSpec.targetCard;
+      if (targetCard.ownerId !== ownerId) return { ok: false, error: 'só podes equipar unidades amigas' };
+
+      // Equipar
+      p.tacticoHand.splice(tacticoHandIndex, 1);
+      targetCard.equipamentos.push(cardDef);
+      this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} equipaste ${cardDef.nome} em ${targetCard.nome}.`);
+
+      // Recarrega baralho tático
+      if (p.tacticoDeck.length > 0) {
+        p.tacticoHand.push(p.tacticoDeck.shift());
+      }
+      this._checkAutoAdvance(ownerId);
+      return { ok: true, card: cardDef, target: targetCard };
+    }
+
+    // Outras cartas táticas
+    p.tacticoHand.splice(tacticoHandIndex, 1);
 
     // Tira uma nova carta tática do baralho (se houver)
     if (p.tacticoDeck.length > 0) {
       p.tacticoHand.push(p.tacticoDeck.shift());
     }
 
-    // Por enquanto, apenas log e descarta (sem efeitos específicos ainda)
     // Estrutura para expansão futura:
     switch (tipo) {
       case 'Equipamento':
-        // TODO: equipar a uma unidade
-        this.log(`${ownerId === 'player' ? 'Tu' : 'Adversário'} jogaste o Equipamento ${cardDef.nome}.`);
+        // Nunca chega aqui (tratado acima)
         break;
       case 'Magia':
         // TODO: aplicar efeito de magia

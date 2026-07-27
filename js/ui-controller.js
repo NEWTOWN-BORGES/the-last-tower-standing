@@ -142,6 +142,9 @@
   function cardHtml(card) {
     const marks = [0, 1].map((i) => `<div class="pressure-dot ${i < card.pressaoMarcas ? 'lit' : ''}"></div>`).join('');
     const atk = engine.getEffectiveAtaque(card) + engine.getAlignmentAtkBonus(card);
+    const equipHtml = card.equipamentos.map((eq, idx) =>
+      `<div class="equipment-badge" style="right: ${idx * 50}px;"><img src="assets/taticos-3d/${eq.imagem}" alt="${eq.nome}"><span>⚔</span></div>`
+    ).join('');
     return `
       <img src="${card.imagem}" alt="${card.nome}" draggable="false">
       <div class="pressure-marks">${marks}</div>
@@ -149,7 +152,8 @@
         <span class="cstat atk">⚔${atk}</span>
         ${card.escudoAtual > 0 ? `<span class="cstat escudo">🛡${card.escudoAtual}</span>` : ''}
         <span class="cstat vida">❤${Math.max(0, card.vidaAtual)}</span>
-      </div>`;
+      </div>
+      ${equipHtml ? `<div class="equipment-container">${equipHtml}</div>` : ''}`;
   }
 
   function apoioThumbHtml(cardDef) {
@@ -263,7 +267,18 @@
     zoomCancelBtn.onclick = (ev) => { ev.stopPropagation(); zoomOverlay.classList.add('hidden'); };
   }
 
+  let pendingTactico = null; // { idx, cardDef }
+
   function playTactico(idx, cardDef) {
+    // Se é equipamento, pede alvo
+    if (cardDef.tipo_tatico === 'Equipamento') {
+      pendingTactico = { idx, cardDef };
+      zoomOverlay.classList.add('hidden');
+      beginTargetingForTactico();
+      return;
+    }
+
+    // Outras cartas táticas (sem alvo por enquanto)
     const result = engine.playTacticoCard('player', idx, {});
     if (!result.ok) {
       console.warn('Erro ao jogar tática:', result.error);
@@ -271,6 +286,42 @@
       return;
     }
     Sound.apoioCast(); // som temporário, depois customizar por tipo
+    render();
+  }
+
+  function beginTargetingForTactico() {
+    const allCards = [];
+    ['frente', 'retaguarda'].forEach(slotType => {
+      const slots = slotType === 'frente' ? engine.players.player.front : engine.players.player.back;
+      slots.forEach((card, idx) => {
+        if (card) allCards.push({ card, slotType, idx });
+      });
+    });
+
+    targetPromptText.textContent = `Escolhe uma unidade para equipar com ${pendingTactico.cardDef.nome}`;
+    targetOverlay.classList.remove('hidden');
+
+    allCards.forEach(({ card, slotType, idx }) => {
+      const slotId = `${slotType}-${idx}`;
+      const slotEl = $(`#${slotId}`);
+      if (slotEl) {
+        slotEl.classList.add('valid-target');
+        slotEl.addEventListener('click', () => confirmTacticoTarget(card));
+      }
+    });
+  }
+
+  function confirmTacticoTarget(targetCard) {
+    const result = engine.playTacticoCard('player', pendingTactico.idx, { targetCard });
+    if (!result.ok) {
+      console.warn('Erro ao equipar:', result.error);
+      Sound.error();
+      clearTargeting();
+      return;
+    }
+    Sound.apoioCast();
+    clearTargeting();
+    pendingTactico = null;
     render();
   }
 
